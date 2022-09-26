@@ -7,16 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		547B59C928DDA075000A30EE /* FractalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B59C828DDA075000A30EE /* FractalsView.swift */; };
+		547B59D128DDA2D4000A30EE /* ColoursView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B59D028DDA2D4000A30EE /* ColoursView.swift */; };
+		547B59D628DDA2F1000A30EE /* MovementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B59D528DDA2F1000A30EE /* MovementView.swift */; };
+		547B59D828DDB02E000A30EE /* FractalsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B59D728DDB02E000A30EE /* FractalsViewModel.swift */; };
+		547B59DB28DDB230000A30EE /* ShortInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B59DA28DDB230000A30EE /* ShortInfoView.swift */; };
+		547B59DF28DDB43C000A30EE /* FractalSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B59DE28DDB43C000A30EE /* FractalSettingsView.swift */; };
+		547B59E128DDB460000A30EE /* FractalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B59E028DDB460000A30EE /* FractalType.swift */; };
+		547B59E328DDC71A000A30EE /* FractalGenerationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B59E228DDC71A000A30EE /* FractalGenerationView.swift */; };
+		547B59E528DDC8C6000A30EE /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B59E428DDC8C6000A30EE /* IntroView.swift */; };
+		547B59E828DDC926000A30EE /* IntroItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B59E728DDC926000A30EE /* IntroItemView.swift */; };
+		547B59ED28DEFF09000A30EE /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 547B59EC28DEFF09000A30EE /* Shaders.metal */; };
+		547B59F128DF6D03000A30EE /* PlasmaGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B59F028DF6D03000A30EE /* PlasmaGenerator.swift */; };
+		547B59F528E0BC50000A30EE /* UIColor + Average.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B59F428E0BC50000A30EE /* UIColor + Average.swift */; };
 		54E4AAE328DC61A200DD3039 /* CGAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E4AAE228DC61A200DD3039 /* CGAppApp.swift */; };
-		54E4AAE528DC61A200DD3039 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E4AAE428DC61A200DD3039 /* ContentView.swift */; };
+		54E4AAE528DC61A200DD3039 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E4AAE428DC61A200DD3039 /* MainView.swift */; };
 		54E4AAE728DC61A400DD3039 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54E4AAE628DC61A400DD3039 /* Assets.xcassets */; };
 		54E4AAEA28DC61A400DD3039 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54E4AAE928DC61A400DD3039 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		547B59C828DDA075000A30EE /* FractalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FractalsView.swift; sourceTree = "<group>"; };
+		547B59D028DDA2D4000A30EE /* ColoursView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoursView.swift; sourceTree = "<group>"; };
+		547B59D528DDA2F1000A30EE /* MovementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementView.swift; sourceTree = "<group>"; };
+		547B59D728DDB02E000A30EE /* FractalsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FractalsViewModel.swift; sourceTree = "<group>"; };
+		547B59DA28DDB230000A30EE /* ShortInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortInfoView.swift; sourceTree = "<group>"; };
+		547B59DE28DDB43C000A30EE /* FractalSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FractalSettingsView.swift; sourceTree = "<group>"; };
+		547B59E028DDB460000A30EE /* FractalType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FractalType.swift; sourceTree = "<group>"; };
+		547B59E228DDC71A000A30EE /* FractalGenerationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FractalGenerationView.swift; sourceTree = "<group>"; };
+		547B59E428DDC8C6000A30EE /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
+		547B59E728DDC926000A30EE /* IntroItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroItemView.swift; sourceTree = "<group>"; };
+		547B59EC28DEFF09000A30EE /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		547B59F028DF6D03000A30EE /* PlasmaGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlasmaGenerator.swift; sourceTree = "<group>"; };
+		547B59F428E0BC50000A30EE /* UIColor + Average.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Average.swift"; sourceTree = "<group>"; };
 		54E4AADF28DC61A200DD3039 /* CGApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CGApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54E4AAE228DC61A200DD3039 /* CGAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGAppApp.swift; sourceTree = "<group>"; };
-		54E4AAE428DC61A200DD3039 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		54E4AAE428DC61A200DD3039 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		54E4AAE628DC61A400DD3039 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54E4AAE928DC61A400DD3039 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -32,6 +58,242 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		547B59BD28DD9D1A000A30EE /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				54E4AAE228DC61A200DD3039 /* CGAppApp.swift */,
+				547B59BE28DD9D22000A30EE /* Resources */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		547B59BE28DD9D22000A30EE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				54E4AAE828DC61A400DD3039 /* Preview Content */,
+				54E4AAE628DC61A400DD3039 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		547B59BF28DD9D38000A30EE /* DataLayer */ = {
+			isa = PBXGroup;
+			children = (
+				547B59EA28DEFEED000A30EE /* Metal */,
+				547B59E028DDB460000A30EE /* FractalType.swift */,
+			);
+			path = DataLayer;
+			sourceTree = "<group>";
+		};
+		547B59C028DD9D42000A30EE /* BusinessLayer */ = {
+			isa = PBXGroup;
+			children = (
+				547B59EF28DF6CE8000A30EE /* FractalManagers */,
+				547B59C728DD9D8C000A30EE /* Services */,
+			);
+			path = BusinessLayer;
+			sourceTree = "<group>";
+		};
+		547B59C128DD9D48000A30EE /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				547B59D928DDB202000A30EE /* ShortInfo */,
+				547B59C628DD9D79000A30EE /* Movement */,
+				547B59C528DD9D72000A30EE /* Colours */,
+				547B59C428DD9D68000A30EE /* Fractals */,
+				547B59C328DD9D60000A30EE /* Main */,
+			);
+			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		547B59C228DD9D4E000A30EE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				547B59F228E0BC3A000A30EE /* Extensions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		547B59C328DD9D60000A30EE /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				547B59E628DDC916000A30EE /* Components */,
+				54E4AAE428DC61A200DD3039 /* MainView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		547B59C428DD9D68000A30EE /* Fractals */ = {
+			isa = PBXGroup;
+			children = (
+				547B59CC28DDA094000A30EE /* Components */,
+				547B59CB28DDA08F000A30EE /* ViewModel */,
+				547B59CA28DDA084000A30EE /* View */,
+			);
+			path = Fractals;
+			sourceTree = "<group>";
+		};
+		547B59C528DD9D72000A30EE /* Colours */ = {
+			isa = PBXGroup;
+			children = (
+				547B59CF28DDA2C6000A30EE /* Components */,
+				547B59CE28DDA2C1000A30EE /* ViewModel */,
+				547B59CD28DDA2B7000A30EE /* View */,
+			);
+			path = Colours;
+			sourceTree = "<group>";
+		};
+		547B59C628DD9D79000A30EE /* Movement */ = {
+			isa = PBXGroup;
+			children = (
+				547B59D428DDA2E3000A30EE /* Components */,
+				547B59D328DDA2DC000A30EE /* ViewModel */,
+				547B59D228DDA2D8000A30EE /* View */,
+			);
+			path = Movement;
+			sourceTree = "<group>";
+		};
+		547B59C728DD9D8C000A30EE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		547B59CA28DDA084000A30EE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				547B59C828DDA075000A30EE /* FractalsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		547B59CB28DDA08F000A30EE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				547B59D728DDB02E000A30EE /* FractalsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		547B59CC28DDA094000A30EE /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				547B59E928DE1B12000A30EE /* FractalGeneration */,
+				547B59DE28DDB43C000A30EE /* FractalSettingsView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		547B59CD28DDA2B7000A30EE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				547B59D028DDA2D4000A30EE /* ColoursView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		547B59CE28DDA2C1000A30EE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		547B59CF28DDA2C6000A30EE /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		547B59D228DDA2D8000A30EE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				547B59D528DDA2F1000A30EE /* MovementView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		547B59D328DDA2DC000A30EE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		547B59D428DDA2E3000A30EE /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		547B59D928DDB202000A30EE /* ShortInfo */ = {
+			isa = PBXGroup;
+			children = (
+				547B59DA28DDB230000A30EE /* ShortInfoView.swift */,
+			);
+			path = ShortInfo;
+			sourceTree = "<group>";
+		};
+		547B59E628DDC916000A30EE /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				547B59E428DDC8C6000A30EE /* IntroView.swift */,
+				547B59E728DDC926000A30EE /* IntroItemView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		547B59E928DE1B12000A30EE /* FractalGeneration */ = {
+			isa = PBXGroup;
+			children = (
+				547B59E228DDC71A000A30EE /* FractalGenerationView.swift */,
+			);
+			path = FractalGeneration;
+			sourceTree = "<group>";
+		};
+		547B59EA28DEFEED000A30EE /* Metal */ = {
+			isa = PBXGroup;
+			children = (
+				547B59EB28DEFEF1000A30EE /* Shaders */,
+			);
+			path = Metal;
+			sourceTree = "<group>";
+		};
+		547B59EB28DEFEF1000A30EE /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				547B59EC28DEFF09000A30EE /* Shaders.metal */,
+			);
+			path = Shaders;
+			sourceTree = "<group>";
+		};
+		547B59EF28DF6CE8000A30EE /* FractalManagers */ = {
+			isa = PBXGroup;
+			children = (
+				547B59F028DF6D03000A30EE /* PlasmaGenerator.swift */,
+			);
+			path = FractalManagers;
+			sourceTree = "<group>";
+		};
+		547B59F228E0BC3A000A30EE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				547B59F328E0BC41000A30EE /* UIColor */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		547B59F328E0BC41000A30EE /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				547B59F428E0BC50000A30EE /* UIColor + Average.swift */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
 		54E4AAD628DC61A200DD3039 = {
 			isa = PBXGroup;
 			children = (
@@ -51,10 +313,11 @@
 		54E4AAE128DC61A200DD3039 /* CGApp */ = {
 			isa = PBXGroup;
 			children = (
-				54E4AAE228DC61A200DD3039 /* CGAppApp.swift */,
-				54E4AAE428DC61A200DD3039 /* ContentView.swift */,
-				54E4AAE628DC61A400DD3039 /* Assets.xcassets */,
-				54E4AAE828DC61A400DD3039 /* Preview Content */,
+				547B59BD28DD9D1A000A30EE /* Application */,
+				547B59BF28DD9D38000A30EE /* DataLayer */,
+				547B59C028DD9D42000A30EE /* BusinessLayer */,
+				547B59C128DD9D48000A30EE /* PresentationLayer */,
+				547B59C228DD9D4E000A30EE /* Utils */,
 			);
 			path = CGApp;
 			sourceTree = "<group>";
@@ -137,8 +400,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54E4AAE528DC61A200DD3039 /* ContentView.swift in Sources */,
+				54E4AAE528DC61A200DD3039 /* MainView.swift in Sources */,
+				547B59D628DDA2F1000A30EE /* MovementView.swift in Sources */,
+				547B59ED28DEFF09000A30EE /* Shaders.metal in Sources */,
 				54E4AAE328DC61A200DD3039 /* CGAppApp.swift in Sources */,
+				547B59D128DDA2D4000A30EE /* ColoursView.swift in Sources */,
+				547B59E328DDC71A000A30EE /* FractalGenerationView.swift in Sources */,
+				547B59D828DDB02E000A30EE /* FractalsViewModel.swift in Sources */,
+				547B59DF28DDB43C000A30EE /* FractalSettingsView.swift in Sources */,
+				547B59DB28DDB230000A30EE /* ShortInfoView.swift in Sources */,
+				547B59F528E0BC50000A30EE /* UIColor + Average.swift in Sources */,
+				547B59F128DF6D03000A30EE /* PlasmaGenerator.swift in Sources */,
+				547B59E828DDC926000A30EE /* IntroItemView.swift in Sources */,
+				547B59E128DDB460000A30EE /* FractalType.swift in Sources */,
+				547B59E528DDC8C6000A30EE /* IntroView.swift in Sources */,
+				547B59C928DDA075000A30EE /* FractalsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,7 +471,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -249,7 +525,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -266,7 +542,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CGApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"CGApp/Application/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 4LMDFB95MF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -295,7 +571,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CGApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"CGApp/Application/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 4LMDFB95MF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
