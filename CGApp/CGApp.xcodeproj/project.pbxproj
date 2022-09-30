@@ -19,7 +19,6 @@
 		547B59E828DDC926000A30EE /* IntroItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B59E728DDC926000A30EE /* IntroItemView.swift */; };
 		547B59ED28DEFF09000A30EE /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 547B59EC28DEFF09000A30EE /* Shaders.metal */; };
 		547B59F128DF6D03000A30EE /* PlasmaGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B59F028DF6D03000A30EE /* PlasmaGenerator.swift */; };
-		547B59F528E0BC50000A30EE /* UIColor + Average.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B59F428E0BC50000A30EE /* UIColor + Average.swift */; };
 		54E4AAE328DC61A200DD3039 /* CGAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E4AAE228DC61A200DD3039 /* CGAppApp.swift */; };
 		54E4AAE528DC61A200DD3039 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E4AAE428DC61A200DD3039 /* MainView.swift */; };
 		54E4AAE728DC61A400DD3039 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54E4AAE628DC61A400DD3039 /* Assets.xcassets */; };
@@ -39,7 +38,6 @@
 		547B59E728DDC926000A30EE /* IntroItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroItemView.swift; sourceTree = "<group>"; };
 		547B59EC28DEFF09000A30EE /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
 		547B59F028DF6D03000A30EE /* PlasmaGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlasmaGenerator.swift; sourceTree = "<group>"; };
-		547B59F428E0BC50000A30EE /* UIColor + Average.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Average.swift"; sourceTree = "<group>"; };
 		54E4AADF28DC61A200DD3039 /* CGApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CGApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54E4AAE228DC61A200DD3039 /* CGAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGAppApp.swift; sourceTree = "<group>"; };
 		54E4AAE428DC61A200DD3039 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -289,7 +287,6 @@
 		547B59F328E0BC41000A30EE /* UIColor */ = {
 			isa = PBXGroup;
 			children = (
-				547B59F428E0BC50000A30EE /* UIColor + Average.swift */,
 			);
 			path = UIColor;
 			sourceTree = "<group>";
@@ -409,7 +406,6 @@
 				547B59D828DDB02E000A30EE /* FractalsViewModel.swift in Sources */,
 				547B59DF28DDB43C000A30EE /* FractalSettingsView.swift in Sources */,
 				547B59DB28DDB230000A30EE /* ShortInfoView.swift in Sources */,
-				547B59F528E0BC50000A30EE /* UIColor + Average.swift in Sources */,
 				547B59F128DF6D03000A30EE /* PlasmaGenerator.swift in Sources */,
 				547B59E828DDC926000A30EE /* IntroItemView.swift in Sources */,
 				547B59E128DDB460000A30EE /* FractalType.swift in Sources */,

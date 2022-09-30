@@ -5,7 +5,7 @@
 //  Created by Matviy Suk on 24.09.2022.
 //
 
-import Foundation
+import GameplayKit
 import UIKit
 
 final class PlasmaGenerator {
@@ -39,125 +39,113 @@ final class PlasmaGenerator {
     private let rect: CGRect
     private var roughness: Double = 0.5
     
-    private(set) var pointsColors: [[UIColor]]
+    private(set) var pointsMap: [[CGFloat]]
     
     
     // MARK: - Init
     init(rect: CGRect) {
         self.rect = rect
         
-        self.pointsColors = Array(repeating: Array(
-            repeating: .white,
-            count: Int(rect.height) + 1
-        ), count: Int(rect.width) + 1
+        self.pointsMap = Array(
+            repeating: Array(
+                repeating: .zero,
+                count: Int(rect.height) + 1
+            ),
+            count: Int(rect.width) + 1
         )
-        
-        var colours = [UIColor.blue, .blue, .yellow, .blue].shuffled()
-        
-        saveColor(.white, at: rect.c1)
-        saveColor(.blue, at: rect.c2)
-        saveColor(.green, at: rect.c3)
-        saveColor(.blue, at: rect.c4)
+                
+        save(.random(in: .zero...1.0), at: rect.c1)
+        save(.random(in: .zero...1.0), at: rect.c2)
+        save(.random(in: .zero...1.0), at: rect.c3)
+        save(.random(in: .zero...1.0), at: rect.c4)
     }
     
     // MARK: - Actions
     
-    func plasmaFractal(roughness: Double) -> [[UIColor]] {
+    func plasmaFractal(roughness: Double) -> [[CGFloat]] {
         self.roughness = roughness
         
         midpointDisp(
             rect: rect,
-            std: rect.height + rect.width / 2
+            std: 1.0
         )
         
-        return pointsColors
+        return pointsMap
     }
     
     private func midpointDisp(
         rect: CGRect,
-        std: Double
+        std: CGFloat
     ) {
-        if rect.width > 1 || rect.height > 1 {
-            /*
-            let wDisp = Double.random(in: -(rect.width / 4)...(rect.width / 4))
-            let hDisp = Double.random(in: -(rect.height / 4)...(rect.height / 4))
-            let dispMid = applyDisplacementTo(rect.mid, in: rect, wDisp: wDisp, hDisp: hDisp)
-            let e1Disp = applyDisplacementTo(rect.e1, in: rect, wDisp: wDisp)
-            let e2Disp = applyDisplacementTo(rect.e2, in: rect, hDisp: hDisp)
-            let e3Disp = applyDisplacementTo(rect.e3, in: rect, wDisp: wDisp)
-            let e4Disp = applyDisplacementTo(rect.e4, in: rect, hDisp: hDisp)
+        if rect.width > 2 || rect.height > 2 {
+/*
+//    Firstly, tried to use Gaussian Distribution to generate random number as
+//    it was recommended in the source. However, usual random generation gives better result.
+            let random = GKRandomSource()
+            let gaussDistr = GKGaussianDistribution(randomSource: random, lowestValue: -Int(std * 100), highestValue: Int(std * 100)).nextInt()
+ */
             
-            saveColor(
-                getColorBy(rect.c1).getAverageColorWith(getColorBy(rect.c2)),
-                at: e1Disp
-            )
-            saveColor(
-                getColorBy(rect.c2).getAverageColorWith(getColorBy(rect.c3)),
-                at: e2Disp
-            )
-            saveColor(
-                getColorBy(rect.c3).getAverageColorWith(getColorBy(rect.c4)),
-                at: e3Disp
-            )
-            saveColor(
-                getColorBy(rect.c4).getAverageColorWith(getColorBy(rect.c1)),
-                at: e4Disp
-            )
-            saveColor(
-                getColorBy(e1Disp).getAverageColorWith(getColorBy(e3Disp)),
-                at: dispMid
+            let disp = CGFloat.random(in: -std...std) * roughness
+            
+            save([getValueBy(rect.c1),
+                  getValueBy(rect.c2)
+                 ].avrg(),
+                 at: rect.e1
             )
             
-            midpointDisp(rect: CGRect(c1: rect.c1, c2: e1Disp, c3: dispMid), std: std / 2) // Upper-left
-            midpointDisp(rect: CGRect(c1: e1Disp, c2: rect.c2, c3: e2Disp), std: std / 2) // Upper-right
-            midpointDisp(rect: CGRect(c1: dispMid, c2: e2Disp, c3: rect.c3), std: std / 2) // Lower-right
-            midpointDisp(rect: CGRect(c1: e4Disp, c2: dispMid, c3: e3Disp), std: std / 2) // Lower-left
-            */
-
-            saveColor(
-                getColorBy(rect.c1).getAverageColorWith(getColorBy(rect.c2)),
-                at: rect.e1
+            save([getValueBy(rect.c2),
+                  getValueBy(rect.c3)
+                 ].avrg(),
+                 at: rect.e2
             )
-            saveColor(
-                getColorBy(rect.c2).getAverageColorWith(getColorBy(rect.c3)),
-                at: rect.e2
+            
+            save([getValueBy(rect.c3),
+                  getValueBy(rect.c4)
+                 ].avrg(),
+                 at: rect.e3
             )
-            saveColor(
-                getColorBy(rect.c3).getAverageColorWith(getColorBy(rect.c4)),
-                at: rect.e3
-            )
-            saveColor(
-                getColorBy(rect.c4).getAverageColorWith(getColorBy(rect.c1)),
+            
+            save(
+                [getValueBy(rect.c1),
+                 getValueBy(rect.c4)
+                ].avrg(),
                 at: rect.e4
             )
-            saveColor(
-                getColorBy(rect.e1).getAverageColorWith(getColorBy(rect.e3)),
-                at: rect.mid
+            
+            save([getValueBy(rect.c1),
+                  getValueBy(rect.c2),
+                  getValueBy(rect.c3),
+                  getValueBy(rect.c4)
+                  ].avrg() + disp,
+                 at: rect.mid
             )
 
-            midpointDisp(rect: CGRect(c1: rect.c1, c2: rect.e1, c3: rect.mid), std: std / 2) // Upper-left
-            midpointDisp(rect: CGRect(c1: rect.e1, c2: rect.c2, c3: rect.e2), std: std / 2) // Upper-right
-            midpointDisp(rect: CGRect(c1: rect.mid, c2: rect.e2, c3: rect.c3), std: std / 2) // Lower-right
-            midpointDisp(rect: CGRect(c1: rect.e4, c2: rect.mid, c3: rect.e3), std: std / 2)
+            midpointDisp(rect: rect.a1, std: std / 2) // Upper-left
+            midpointDisp(rect: rect.a2, std: std / 2) // Upper-right
+            midpointDisp(rect: rect.a3, std: std / 2) // Lower-right
+            midpointDisp(rect: rect.a4, std: std / 2) // Lower-left
+        }
+        else {
+            if (rect.width == 2) {
+                pointsMap[rect.c1.x + 1][rect.c1.y] = [getValueBy(rect.c1), getValueBy(rect.c2)].avrg()
+            }
+
+            if (rect.height == 2) {
+                pointsMap[rect.c1.x][rect.c1.y + 1] = [getValueBy(rect.c1), getValueBy(rect.c4)].avrg()
+            }
+
+            if (rect.width == 2 && rect.height == 2) {
+                pointsMap[rect.c1.x + 1][rect.c1.y + 1] = [getValueBy(rect.c2), getValueBy(rect.c4)].avrg()
+            }
         }
     }
     
-    private func saveColor(_ color: UIColor, at point: Point) {
-        pointsColors[point.x][point.y] = color
+    private func save(_ value: CGFloat, at point: Point) {
+        pointsMap[point.x][point.y] = value
     }
     
-    private func getColorBy(_ point: Point) -> UIColor {
-        pointsColors[point.x][point.y]
-    }
-    
-    private func applyDisplacementTo(_ point: Point, in rect: CGRect, wDisp: Double = .zero, hDisp: Double = .zero) -> Point {
-        let x = Double(point.x) + (rect.width > 10 ? wDisp : .zero)
-        let y = Double(point.y) + (rect.height > 10 ? hDisp : .zero)
-        
-        return Point(
-            x: x >= rect.maxX ? rect.maxX : (x <= rect.minX ? rect.minX : x),
-            y: y >= rect.maxY ? rect.maxY : (y <= rect.minY ? rect.minY : y)
-        )
+    private func getValueBy(_ point: Point) -> CGFloat {
+        pointsMap[point.x][point.y]
     }
 }
 
@@ -166,15 +154,17 @@ fileprivate extension CGRect {
     
     /*
      
-    c1     e1     c2
-    + ---- * ---- +
-    |             |
-    |     mid     |
- e4 *      @      * e2
-    |     mid     |
-    |             |
-    + ---- * ---- +
-    c4     e3     c3
+    c1       e1       c2
+    + ------ * ------ +
+    |        |        |
+    |   a1   |   a2   |
+    |        |        |
+ e4 *-------mid-------* e2
+    |        |        |
+    |   a4   |   a3   |
+    |        |        |
+    + ------ * ------ +
+    c4       e3       c3
      
     */
         
@@ -214,30 +204,34 @@ fileprivate extension CGRect {
         c4.midpointWith(c1)
     }
     
-    init(c1: Point, c2: Point, c3: Point) {
-        let width = fabs(Double(c2.x) - Double(c1.x))
-        let height = fabs(Double(c3.y) - Double(c2.y))
-        
-        if width <= 0 || height <= 0 {
-            print("Point Stop\(width) \(height)")
-        }
-        
-        self.init(
-            origin: CGPoint(x: c1.x, y: c1.y),
-            size: CGSize(
-                width: width > 0 ? width : 1 ,
-                height: height > 0 ? height : 1
-            )
-        )
+    var a1: CGRect {
+        .init(x: c1.x, y: c1.y, width: mid.x - c1.x, height: mid.y - c1.y)
+    }
+    
+    var a2: CGRect {
+        .init(x: e1.x, y: e1.y, width: e2.x - e1.x, height: e2.y - e1.y)
+    }
+    
+    var a3: CGRect {
+        .init(x: mid.x, y: mid.y, width: c3.x - mid.x, height: c3.y - mid.y)
+    }
+    
+    var a4: CGRect {
+        .init(x: e4.x, y: e4.y, width: e3.x - e4.x, height: e3.y - e4.y)
     }
 }
 
-extension UIColor {
-    static var lightCloud: UIColor {
-        .init(red: 0.9, green: 0.9, blue: 1.0, alpha: 1.0)
-    }
-    
-    static var darkCloud: UIColor {
-        .init(red: 0.7, green: 0.7, blue: 1.0, alpha: 1.0)
+fileprivate extension Array where Element == CGFloat {
+    func avrg() -> CGFloat {
+        self.reduce(.zero, +) / CGFloat(self.count)
     }
 }
+
+fileprivate extension CGFloat {
+    // func frame() Makes the value to be between 0.0 and 1.0
+    func frame() -> CGFloat {
+        self < .zero ? .zero : (self > 1.0 ? 1.0 : self)
+    }
+}
+
+//* * * * * * * * * *

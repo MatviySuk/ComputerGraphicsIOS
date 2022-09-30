@@ -109,14 +109,14 @@ final class DisplayFractalView: UIView {
         super.draw(rect)
         
         if playPressed {
-            let plasmaColors = PlasmaGenerator(rect: rect).plasmaFractal(roughness: 0.5)
-            
-            for i in stride(from: Int.zero, to: Int(bounds.width), by: 1) {
-                for j in stride(from: Int.zero, to: Int(bounds.height), by: 1) {
-//                    let color = colors.randomElement() ?? .red
+            let plasmaPoints = PlasmaGenerator(rect: rect).plasmaFractal(roughness: 1.0)
+
+            for i in .zero..<Int(rect.width) {
+                for j in .zero..<Int(rect.height) {
+                    let color = UIColor(hue: 220 / 360, saturation: plasmaPoints[i][j], brightness: 1.0, alpha: 1.0)
                     let path = UIBezierPath(rect: .init(x: i, y: j, width: 1, height: 1))
                     
-                    plasmaColors[i][j].set()
+                    color.set()
                     path.fill()
                 }
             }
