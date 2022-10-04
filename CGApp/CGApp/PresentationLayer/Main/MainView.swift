@@ -22,7 +22,7 @@ struct MainView: View {
     
     var tabbar: some View {
         TabView {
-            FractalsView()
+            FractalsMainView()
                 .tabItem {
                     Label("Fractals", systemImage: "scribble.variable")
                 }

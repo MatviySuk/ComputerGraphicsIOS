@@ -5,14 +5,52 @@
 //  Created by Matviy Suk on 23.09.2022.
 //
 
-import Foundation
+import SwiftUI
 
-final class FractalsViewModel: ObservableObject {
-    
+final class FractalsViewModel: NSObject, ObservableObject {
     // MARK: - Properties
     @Published var fractalType: FractalType = .BrownianMotion
-    @Published var iterations: Int = 1
+    @Published var plasmaModifier: PlasmaModifier = .Saturation
+    @Published var fractalColorValue: CGColor = UIColor.systemPurple.cgColor
+    @Published var iterations: Int = 50
+    @Published var presentAlert = false
     
+    private let imageSaver = ImageSaver()
+    private(set) var saveImageResult: (message: String, error: Error?) = ("", nil) {
+        didSet {
+            self.presentAlert = true
+        }
+    }
+    
+    var plasmaPoints = [[CGFloat]]()
+    var brownianMotionPoint = [CGPoint]()
+    
+    // MARK: - Actions
+    
+    func generateFractal(rect: CGRect) {
+        switch fractalType {
+        case .BrownianMotion:
+            self.plasmaPoints.removeAll()
+            self.brownianMotionPoint = BrownianMotionGenerator(
+                rect: rect
+            ).fractalPoints(iterations: iterations)
+        case .Plasma:
+            self.brownianMotionPoint.removeAll()
+            self.plasmaPoints = PlasmaGenerator(rect: rect).plasmaFractal(roughness: 1.0)
+        }
+    }
+    
+    func saveImage(_ uiImage: UIImage) {
+        imageSaver.successHandler = { [weak self] in
+            self?.saveImageResult = ("The image is successfully saved!", nil)
+        }
+
+        imageSaver.errorHandler = { [weak self] error in
+            self?.saveImageResult = ("The image is not saved!", error)
+        }
+        
+        imageSaver.writeToPhotoAlbum(image: uiImage)
+    }
     
     // MARK: - Appearance
     
