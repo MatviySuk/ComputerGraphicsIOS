@@ -7,18 +7,58 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5402AD5F28E891BE0059983B /* PlasmaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5402AD5E28E891BE0059983B /* PlasmaView.swift */; };
+		5402AD6128E892040059983B /* BrownianMotionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5402AD6028E892040059983B /* BrownianMotionView.swift */; };
+		5402AD6528E89C700059983B /* FractalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5402AD6428E89C700059983B /* FractalView.swift */; };
+		5402AD6728E89EEF0059983B /* BrownianMotionGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5402AD6628E89EEF0059983B /* BrownianMotionGenerator.swift */; };
+		547B59C928DDA075000A30EE /* FractalsMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B59C828DDA075000A30EE /* FractalsMainView.swift */; };
+		547B59D128DDA2D4000A30EE /* ColoursView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B59D028DDA2D4000A30EE /* ColoursView.swift */; };
+		547B59D628DDA2F1000A30EE /* MovementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B59D528DDA2F1000A30EE /* MovementView.swift */; };
+		547B59D828DDB02E000A30EE /* FractalsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B59D728DDB02E000A30EE /* FractalsViewModel.swift */; };
+		547B59DB28DDB230000A30EE /* ShortInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B59DA28DDB230000A30EE /* ShortInfoView.swift */; };
+		547B59DF28DDB43C000A30EE /* FractalSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B59DE28DDB43C000A30EE /* FractalSettingsView.swift */; };
+		547B59E128DDB460000A30EE /* FractalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B59E028DDB460000A30EE /* FractalType.swift */; };
+		547B59E328DDC71A000A30EE /* FractalGenerationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B59E228DDC71A000A30EE /* FractalGenerationView.swift */; };
+		547B59E528DDC8C6000A30EE /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B59E428DDC8C6000A30EE /* IntroView.swift */; };
+		547B59E828DDC926000A30EE /* IntroItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B59E728DDC926000A30EE /* IntroItemView.swift */; };
+		547B59F128DF6D03000A30EE /* PlasmaGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B59F028DF6D03000A30EE /* PlasmaGenerator.swift */; };
 		54E4AAE328DC61A200DD3039 /* CGAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E4AAE228DC61A200DD3039 /* CGAppApp.swift */; };
-		54E4AAE528DC61A200DD3039 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E4AAE428DC61A200DD3039 /* ContentView.swift */; };
+		54E4AAE528DC61A200DD3039 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E4AAE428DC61A200DD3039 /* MainView.swift */; };
 		54E4AAE728DC61A400DD3039 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54E4AAE628DC61A400DD3039 /* Assets.xcassets */; };
 		54E4AAEA28DC61A400DD3039 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54E4AAE928DC61A400DD3039 /* Preview Assets.xcassets */; };
+		54FCEFCC28E9B0A0005AE50D /* View + Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FCEFCB28E9B0A0005AE50D /* View + Image.swift */; };
+		54FCEFCF28EB0278005AE50D /* ScreenshotMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FCEFCE28EB0278005AE50D /* ScreenshotMaker.swift */; };
+		54FCEFD228EC247D005AE50D /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FCEFD128EC247D005AE50D /* ImageSaver.swift */; };
+		54FCEFD828EC7418005AE50D /* Color + Values.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FCEFD728EC7418005AE50D /* Color + Values.swift */; };
+		54FCEFE228EC9F54005AE50D /* ProgressButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FCEFE128EC9F54005AE50D /* ProgressButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5402AD5E28E891BE0059983B /* PlasmaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlasmaView.swift; sourceTree = "<group>"; };
+		5402AD6028E892040059983B /* BrownianMotionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrownianMotionView.swift; sourceTree = "<group>"; };
+		5402AD6428E89C700059983B /* FractalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FractalView.swift; sourceTree = "<group>"; };
+		5402AD6628E89EEF0059983B /* BrownianMotionGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrownianMotionGenerator.swift; sourceTree = "<group>"; };
+		547B59C828DDA075000A30EE /* FractalsMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FractalsMainView.swift; sourceTree = "<group>"; };
+		547B59D028DDA2D4000A30EE /* ColoursView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoursView.swift; sourceTree = "<group>"; };
+		547B59D528DDA2F1000A30EE /* MovementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementView.swift; sourceTree = "<group>"; };
+		547B59D728DDB02E000A30EE /* FractalsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FractalsViewModel.swift; sourceTree = "<group>"; };
+		547B59DA28DDB230000A30EE /* ShortInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortInfoView.swift; sourceTree = "<group>"; };
+		547B59DE28DDB43C000A30EE /* FractalSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FractalSettingsView.swift; sourceTree = "<group>"; };
+		547B59E028DDB460000A30EE /* FractalType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FractalType.swift; sourceTree = "<group>"; };
+		547B59E228DDC71A000A30EE /* FractalGenerationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FractalGenerationView.swift; sourceTree = "<group>"; };
+		547B59E428DDC8C6000A30EE /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
+		547B59E728DDC926000A30EE /* IntroItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroItemView.swift; sourceTree = "<group>"; };
+		547B59F028DF6D03000A30EE /* PlasmaGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlasmaGenerator.swift; sourceTree = "<group>"; };
 		54E4AADF28DC61A200DD3039 /* CGApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CGApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54E4AAE228DC61A200DD3039 /* CGAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGAppApp.swift; sourceTree = "<group>"; };
-		54E4AAE428DC61A200DD3039 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		54E4AAE428DC61A200DD3039 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		54E4AAE628DC61A400DD3039 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54E4AAE928DC61A400DD3039 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		54FCEFCB28E9B0A0005AE50D /* View + Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View + Image.swift"; sourceTree = "<group>"; };
+		54FCEFCE28EB0278005AE50D /* ScreenshotMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotMaker.swift; sourceTree = "<group>"; };
+		54FCEFD128EC247D005AE50D /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
+		54FCEFD728EC7418005AE50D /* Color + Values.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + Values.swift"; sourceTree = "<group>"; };
+		54FCEFE128EC9F54005AE50D /* ProgressButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,11 +72,263 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5402AD6228E89C5E0059983B /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				54FCEFE028EC9F42005AE50D /* ButtonStyles */,
+			);
+			path = Design;
+			sourceTree = "<group>";
+		};
+		5402AD6828E9B0560059983B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				54FCEFCB28E9B0A0005AE50D /* View + Image.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5405231C28E8695B00306635 /* FractalSettings */ = {
+			isa = PBXGroup;
+			children = (
+				547B59DE28DDB43C000A30EE /* FractalSettingsView.swift */,
+			);
+			path = FractalSettings;
+			sourceTree = "<group>";
+		};
+		547B59BD28DD9D1A000A30EE /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				54E4AAE228DC61A200DD3039 /* CGAppApp.swift */,
+				547B59BE28DD9D22000A30EE /* Resources */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		547B59BE28DD9D22000A30EE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				54E4AAE828DC61A400DD3039 /* Preview Content */,
+				54E4AAE628DC61A400DD3039 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		547B59BF28DD9D38000A30EE /* DataLayer */ = {
+			isa = PBXGroup;
+			children = (
+				54FCEFDB28EC8ACE005AE50D /* Fractal */,
+			);
+			path = DataLayer;
+			sourceTree = "<group>";
+		};
+		547B59C028DD9D42000A30EE /* BusinessLayer */ = {
+			isa = PBXGroup;
+			children = (
+				547B59EF28DF6CE8000A30EE /* FractalManagers */,
+				547B59C728DD9D8C000A30EE /* Services */,
+			);
+			path = BusinessLayer;
+			sourceTree = "<group>";
+		};
+		547B59C128DD9D48000A30EE /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				547B59D928DDB202000A30EE /* ShortInfo */,
+				547B59C628DD9D79000A30EE /* Movement */,
+				547B59C528DD9D72000A30EE /* Colours */,
+				547B59C428DD9D68000A30EE /* Fractals */,
+				547B59C328DD9D60000A30EE /* Main */,
+			);
+			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		547B59C228DD9D4E000A30EE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				54FCEFD028EC246D005AE50D /* ImageSaver */,
+				54FCEFCD28EB0263005AE50D /* ScreenShotMaker */,
+				5402AD6228E89C5E0059983B /* Design */,
+				547B59F228E0BC3A000A30EE /* Extensions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		547B59C328DD9D60000A30EE /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				547B59E628DDC916000A30EE /* Components */,
+				54E4AAE428DC61A200DD3039 /* MainView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		547B59C428DD9D68000A30EE /* Fractals */ = {
+			isa = PBXGroup;
+			children = (
+				547B59CC28DDA094000A30EE /* Components */,
+				547B59CB28DDA08F000A30EE /* ViewModel */,
+				547B59CA28DDA084000A30EE /* View */,
+			);
+			path = Fractals;
+			sourceTree = "<group>";
+		};
+		547B59C528DD9D72000A30EE /* Colours */ = {
+			isa = PBXGroup;
+			children = (
+				547B59CF28DDA2C6000A30EE /* Components */,
+				547B59CE28DDA2C1000A30EE /* ViewModel */,
+				547B59CD28DDA2B7000A30EE /* View */,
+			);
+			path = Colours;
+			sourceTree = "<group>";
+		};
+		547B59C628DD9D79000A30EE /* Movement */ = {
+			isa = PBXGroup;
+			children = (
+				547B59D428DDA2E3000A30EE /* Components */,
+				547B59D328DDA2DC000A30EE /* ViewModel */,
+				547B59D228DDA2D8000A30EE /* View */,
+			);
+			path = Movement;
+			sourceTree = "<group>";
+		};
+		547B59C728DD9D8C000A30EE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		547B59CA28DDA084000A30EE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				547B59C828DDA075000A30EE /* FractalsMainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		547B59CB28DDA08F000A30EE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				547B59D728DDB02E000A30EE /* FractalsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		547B59CC28DDA094000A30EE /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				5405231C28E8695B00306635 /* FractalSettings */,
+				547B59E928DE1B12000A30EE /* FractalGeneration */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		547B59CD28DDA2B7000A30EE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				547B59D028DDA2D4000A30EE /* ColoursView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		547B59CE28DDA2C1000A30EE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		547B59CF28DDA2C6000A30EE /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		547B59D228DDA2D8000A30EE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				547B59D528DDA2F1000A30EE /* MovementView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		547B59D328DDA2DC000A30EE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		547B59D428DDA2E3000A30EE /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		547B59D928DDB202000A30EE /* ShortInfo */ = {
+			isa = PBXGroup;
+			children = (
+				547B59DA28DDB230000A30EE /* ShortInfoView.swift */,
+			);
+			path = ShortInfo;
+			sourceTree = "<group>";
+		};
+		547B59E628DDC916000A30EE /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				547B59E428DDC8C6000A30EE /* IntroView.swift */,
+				547B59E728DDC926000A30EE /* IntroItemView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		547B59E928DE1B12000A30EE /* FractalGeneration */ = {
+			isa = PBXGroup;
+			children = (
+				547B59E228DDC71A000A30EE /* FractalGenerationView.swift */,
+				5402AD6428E89C700059983B /* FractalView.swift */,
+				5402AD5E28E891BE0059983B /* PlasmaView.swift */,
+				5402AD6028E892040059983B /* BrownianMotionView.swift */,
+			);
+			path = FractalGeneration;
+			sourceTree = "<group>";
+		};
+		547B59EF28DF6CE8000A30EE /* FractalManagers */ = {
+			isa = PBXGroup;
+			children = (
+				547B59F028DF6D03000A30EE /* PlasmaGenerator.swift */,
+				5402AD6628E89EEF0059983B /* BrownianMotionGenerator.swift */,
+			);
+			path = FractalManagers;
+			sourceTree = "<group>";
+		};
+		547B59F228E0BC3A000A30EE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5402AD6828E9B0560059983B /* View */,
+				547B59F328E0BC41000A30EE /* UIColor */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		547B59F328E0BC41000A30EE /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				54FCEFD728EC7418005AE50D /* Color + Values.swift */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
 		54E4AAD628DC61A200DD3039 = {
 			isa = PBXGroup;
 			children = (
 				54E4AAE128DC61A200DD3039 /* CGApp */,
 				54E4AAE028DC61A200DD3039 /* Products */,
+				54FCEFD428EC4B77005AE50D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,10 +343,11 @@
 		54E4AAE128DC61A200DD3039 /* CGApp */ = {
 			isa = PBXGroup;
 			children = (
-				54E4AAE228DC61A200DD3039 /* CGAppApp.swift */,
-				54E4AAE428DC61A200DD3039 /* ContentView.swift */,
-				54E4AAE628DC61A400DD3039 /* Assets.xcassets */,
-				54E4AAE828DC61A400DD3039 /* Preview Content */,
+				547B59BD28DD9D1A000A30EE /* Application */,
+				547B59BF28DD9D38000A30EE /* DataLayer */,
+				547B59C028DD9D42000A30EE /* BusinessLayer */,
+				547B59C128DD9D48000A30EE /* PresentationLayer */,
+				547B59C228DD9D4E000A30EE /* Utils */,
 			);
 			path = CGApp;
 			sourceTree = "<group>";
@@ -65,6 +358,45 @@
 				54E4AAE928DC61A400DD3039 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		54FCEFCD28EB0263005AE50D /* ScreenShotMaker */ = {
+			isa = PBXGroup;
+			children = (
+				54FCEFCE28EB0278005AE50D /* ScreenshotMaker.swift */,
+			);
+			path = ScreenShotMaker;
+			sourceTree = "<group>";
+		};
+		54FCEFD028EC246D005AE50D /* ImageSaver */ = {
+			isa = PBXGroup;
+			children = (
+				54FCEFD128EC247D005AE50D /* ImageSaver.swift */,
+			);
+			path = ImageSaver;
+			sourceTree = "<group>";
+		};
+		54FCEFD428EC4B77005AE50D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		54FCEFDB28EC8ACE005AE50D /* Fractal */ = {
+			isa = PBXGroup;
+			children = (
+				547B59E028DDB460000A30EE /* FractalType.swift */,
+			);
+			path = Fractal;
+			sourceTree = "<group>";
+		};
+		54FCEFE028EC9F42005AE50D /* ButtonStyles */ = {
+			isa = PBXGroup;
+			children = (
+				54FCEFE128EC9F54005AE50D /* ProgressButtonStyle.swift */,
+			);
+			path = ButtonStyles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +415,8 @@
 			dependencies = (
 			);
 			name = CGApp;
+			packageProductDependencies = (
+			);
 			productName = CGApp;
 			productReference = 54E4AADF28DC61A200DD3039 /* CGApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +445,8 @@
 				Base,
 			);
 			mainGroup = 54E4AAD628DC61A200DD3039;
+			packageReferences = (
+			);
 			productRefGroup = 54E4AAE028DC61A200DD3039 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +473,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54E4AAE528DC61A200DD3039 /* ContentView.swift in Sources */,
+				54E4AAE528DC61A200DD3039 /* MainView.swift in Sources */,
+				547B59D628DDA2F1000A30EE /* MovementView.swift in Sources */,
+				5402AD6728E89EEF0059983B /* BrownianMotionGenerator.swift in Sources */,
+				5402AD5F28E891BE0059983B /* PlasmaView.swift in Sources */,
+				5402AD6128E892040059983B /* BrownianMotionView.swift in Sources */,
+				5402AD6528E89C700059983B /* FractalView.swift in Sources */,
+				54FCEFCF28EB0278005AE50D /* ScreenshotMaker.swift in Sources */,
+				54FCEFD228EC247D005AE50D /* ImageSaver.swift in Sources */,
 				54E4AAE328DC61A200DD3039 /* CGAppApp.swift in Sources */,
+				54FCEFD828EC7418005AE50D /* Color + Values.swift in Sources */,
+				547B59D128DDA2D4000A30EE /* ColoursView.swift in Sources */,
+				547B59E328DDC71A000A30EE /* FractalGenerationView.swift in Sources */,
+				547B59D828DDB02E000A30EE /* FractalsViewModel.swift in Sources */,
+				54FCEFCC28E9B0A0005AE50D /* View + Image.swift in Sources */,
+				547B59DF28DDB43C000A30EE /* FractalSettingsView.swift in Sources */,
+				54FCEFE228EC9F54005AE50D /* ProgressButtonStyle.swift in Sources */,
+				547B59DB28DDB230000A30EE /* ShortInfoView.swift in Sources */,
+				547B59F128DF6D03000A30EE /* PlasmaGenerator.swift in Sources */,
+				547B59E828DDC926000A30EE /* IntroItemView.swift in Sources */,
+				547B59E128DDB460000A30EE /* FractalType.swift in Sources */,
+				547B59E528DDC8C6000A30EE /* IntroView.swift in Sources */,
+				547B59C928DDA075000A30EE /* FractalsMainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,7 +551,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -249,7 +605,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -266,10 +622,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CGApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"CGApp/Application/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 4LMDFB95MF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "App needs access to your photo library to save images of experiments";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -295,10 +652,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CGApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"CGApp/Application/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 4LMDFB95MF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "App needs access to your photo library to save images of experiments";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
