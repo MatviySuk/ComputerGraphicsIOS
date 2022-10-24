@@ -6,10 +6,10 @@
 //
 
 import UIKit
-import SnapKit
 
 class FractalView: UIView {
     var showFractal: Bool = false
+    var fractalImage: UIImage? = nil
         
     init() {
         super.init(frame: .zero)

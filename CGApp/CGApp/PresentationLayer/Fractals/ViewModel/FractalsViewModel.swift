@@ -9,9 +9,10 @@ import SwiftUI
 
 final class FractalsViewModel: NSObject, ObservableObject {
     // MARK: - Properties
-    @Published var fractalType: FractalType = .BrownianMotion
+    @Published var fractalType: FractalType = .Plasma
     @Published var plasmaModifier: PlasmaModifier = .Saturation
     @Published var fractalColorValue: CGColor = UIColor.systemPurple.cgColor
+    @Published var roughness: Double = 1.0
     @Published var iterations: Int = 50
     @Published var presentAlert = false
     
@@ -36,7 +37,7 @@ final class FractalsViewModel: NSObject, ObservableObject {
             ).fractalPoints(iterations: iterations)
         case .Plasma:
             self.brownianMotionPoint.removeAll()
-            self.plasmaPoints = PlasmaGenerator(rect: rect).plasmaFractal(roughness: 1.0)
+            self.plasmaPoints = PlasmaGenerator(rect: rect).plasmaFractal(roughness: roughness)
         }
     }
     
@@ -55,10 +56,14 @@ final class FractalsViewModel: NSObject, ObservableObject {
     // MARK: - Appearance
     
     func infoTitle() -> String {
-        "Lorem Ipsum"
+        "What is fractal?"
     }
     
     func infoDescription() -> String {
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris consequat felis ut ornare elementum. Cras in nibh vehicula mauris semper suscipit sed quis risus. Ut porta ullamcorper odio, pellentesque ultrices ligula mattis sed. Sed consequat finibus fermentum. Praesent ac diam quis lectus egestas dignissim. Proin vel quam vitae mi semper euismod id facilisis ligula. Nunc et tempus massa, sed vestibulum sem. Quisque laoreet in magna eu vulputate. Aliquam id est lacus. In tempus dignissim tortor. Integer sit amet ultricies tellus. Morbi vehicula quam sit amet augue gravida dignissim. Curabitur a eros risus."
+        "A fractal is a non-regular geometric shape that has the same degree of non-regularity on all scales. Fractals can be thought of as never-ending patterns."
+        + "\n\n"
+        + "Plasma fractal also known, as the diamond-square algorithm, can be used to generate realistic-looking landscapes, and different implementations are used in computer graphics software such as Terragen. It is also applicable as a common component in procedural textures."
+        + "\n\n"
+        + "Brownian motion is the random motion of particles suspended in a medium (a liquid or a gas). This pattern of motion typically consists of random fluctuations in a particle's position inside a fluid sub-domain, followed by a relocation to another sub-domain. Each relocation is followed by more fluctuations within the new closed volume. This pattern describes a fluid at thermal equilibrium, defined by a given temperature"
     }
 }

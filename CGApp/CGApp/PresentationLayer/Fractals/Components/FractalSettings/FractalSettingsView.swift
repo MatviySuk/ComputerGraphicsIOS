@@ -54,6 +54,10 @@ struct FractalSettingsView: View {
                         step: 10
                 )
             } else {
+                HStack {
+                    Text("Roughness  ")
+                    Slider(value: $viewModel.roughness, in: 0.1...1.0)
+                }
                 Picker("Modify color by", selection: $viewModel.plasmaModifier) {
                     ForEach(PlasmaModifier.allCases, id: \.self) { type in
                         Text(type.title).tag(type)

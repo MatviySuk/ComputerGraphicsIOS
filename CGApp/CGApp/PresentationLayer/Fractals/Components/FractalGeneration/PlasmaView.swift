@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 final class PlasmaView: FractalView {
     //MARK: - Properties
@@ -30,23 +31,32 @@ final class PlasmaView: FractalView {
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
-        
-        let calculateColor: ((CGFloat) -> UIColor) = plasmaModifier == .Hue
-        ? calculateColorByHue
-        : calculateColorBySat
-            
-        
                 
         if showFractal {
-            for i in .zero..<points.count {
-                for j in .zero..<points[i].count {
-                    let color = calculateColor(points[i][j])
-                    let path = UIBezierPath(rect: .init(x: i, y: j, width: 1, height: 1))
-                    
-                    color.set()
-                    path.fill()
+            let start = DispatchTime.now()
+
+            let width = points.count
+            let height = points.first?.count ?? .zero
+            let calculateColor: ((CGFloat) -> UIColor) = plasmaModifier == .Hue
+            ? calculateColorByHue
+            : calculateColorBySat
+            
+            var bitmap = [PixelData]()
+
+            for i in .zero..<height {
+                for j in .zero..<width {
+                    bitmap.append(calculateColor(points[j][i]).pixelData)
                 }
             }
+            
+            if let image = CGImage.generateFromBitmap(bitmap, width: width, height: height) {
+                layer.contents = image
+                fractalImage = UIImage(cgImage: image)
+            }
+                    
+            let end = DispatchTime.now()
+            
+            print("Plasma Time: \((end.uptimeNanoseconds - start.uptimeNanoseconds) / 1000000)")
         }
     }
     

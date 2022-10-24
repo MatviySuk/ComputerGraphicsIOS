@@ -49,14 +49,14 @@ struct IntroView: View {
             
         }
         .padding()
-        .background(Color.white)
+        .background(Color(.systemBackground))
     }
     
     var fractalsItem: some View {
         IntroItemView(
             icon: Image(systemName: "scribble.variable"),
             title: "Fractals",
-            description: "Fractals Fractals Fractals Fractals Fractals Fractals Fractals Fractals Fractals Fractals Fractals Fractals Fractals Fractals Fractals Fractals Fractals Fractals Fractals  "
+            description: "You will be able to discover the process how fractals generate and apply some modifier to create your own fractal."
         )
     }
     

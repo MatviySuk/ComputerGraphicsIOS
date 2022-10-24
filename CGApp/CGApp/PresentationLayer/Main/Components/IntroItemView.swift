@@ -22,10 +22,10 @@ struct IntroItemView: View {
                         
             VStack(alignment: .leading) {
                 Text(title)
-                    .font(.system(size: 13, weight: .bold))
+                    .font(.system(size: 14, weight: .bold))
                 
                 Text(description)
-                    .font(.system(size: 13, weight: .regular))
+                    .font(.system(size: 14, weight: .regular))
             }
         }
     }
