@@ -22,6 +22,10 @@
 		547B59E528DDC8C6000A30EE /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B59E428DDC8C6000A30EE /* IntroView.swift */; };
 		547B59E828DDC926000A30EE /* IntroItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B59E728DDC926000A30EE /* IntroItemView.swift */; };
 		547B59F128DF6D03000A30EE /* PlasmaGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B59F028DF6D03000A30EE /* PlasmaGenerator.swift */; };
+		5487156F2902FFF6000964A2 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5487156E2902FFF6000964A2 /* SnapKit */; };
+		54871572290570C4000964A2 /* Number + Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54871571290570C4000964A2 /* Number + Range.swift */; };
+		548715782905B45C000964A2 /* PixelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548715772905B45C000964A2 /* PixelData.swift */; };
+		5487157B2905BDCE000964A2 /* CGImage + Bitmap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5487157A2905BDCE000964A2 /* CGImage + Bitmap.swift */; };
 		54E4AAE328DC61A200DD3039 /* CGAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E4AAE228DC61A200DD3039 /* CGAppApp.swift */; };
 		54E4AAE528DC61A200DD3039 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E4AAE428DC61A200DD3039 /* MainView.swift */; };
 		54E4AAE728DC61A400DD3039 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54E4AAE628DC61A400DD3039 /* Assets.xcassets */; };
@@ -49,6 +53,9 @@
 		547B59E428DDC8C6000A30EE /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
 		547B59E728DDC926000A30EE /* IntroItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroItemView.swift; sourceTree = "<group>"; };
 		547B59F028DF6D03000A30EE /* PlasmaGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlasmaGenerator.swift; sourceTree = "<group>"; };
+		54871571290570C4000964A2 /* Number + Range.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Number + Range.swift"; sourceTree = "<group>"; };
+		548715772905B45C000964A2 /* PixelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelData.swift; sourceTree = "<group>"; };
+		5487157A2905BDCE000964A2 /* CGImage + Bitmap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGImage + Bitmap.swift"; sourceTree = "<group>"; };
 		54E4AADF28DC61A200DD3039 /* CGApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CGApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54E4AAE228DC61A200DD3039 /* CGAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGAppApp.swift; sourceTree = "<group>"; };
 		54E4AAE428DC61A200DD3039 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -66,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5487156F2902FFF6000964A2 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +125,7 @@
 		547B59BF28DD9D38000A30EE /* DataLayer */ = {
 			isa = PBXGroup;
 			children = (
+				548715762905B452000964A2 /* Pixel */,
 				54FCEFDB28EC8ACE005AE50D /* Fractal */,
 			);
 			path = DataLayer;
@@ -309,6 +318,8 @@
 		547B59F228E0BC3A000A30EE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				548715792905BDC1000964A2 /* CGImage */,
+				54871570290570AD000964A2 /* Number */,
 				5402AD6828E9B0560059983B /* View */,
 				547B59F328E0BC41000A30EE /* UIColor */,
 			);
@@ -321,6 +332,30 @@
 				54FCEFD728EC7418005AE50D /* Color + Values.swift */,
 			);
 			path = UIColor;
+			sourceTree = "<group>";
+		};
+		54871570290570AD000964A2 /* Number */ = {
+			isa = PBXGroup;
+			children = (
+				54871571290570C4000964A2 /* Number + Range.swift */,
+			);
+			path = Number;
+			sourceTree = "<group>";
+		};
+		548715762905B452000964A2 /* Pixel */ = {
+			isa = PBXGroup;
+			children = (
+				548715772905B45C000964A2 /* PixelData.swift */,
+			);
+			path = Pixel;
+			sourceTree = "<group>";
+		};
+		548715792905BDC1000964A2 /* CGImage */ = {
+			isa = PBXGroup;
+			children = (
+				5487157A2905BDCE000964A2 /* CGImage + Bitmap.swift */,
+			);
+			path = CGImage;
 			sourceTree = "<group>";
 		};
 		54E4AAD628DC61A200DD3039 = {
@@ -416,6 +451,7 @@
 			);
 			name = CGApp;
 			packageProductDependencies = (
+				5487156E2902FFF6000964A2 /* SnapKit */,
 			);
 			productName = CGApp;
 			productReference = 54E4AADF28DC61A200DD3039 /* CGApp.app */;
@@ -446,6 +482,7 @@
 			);
 			mainGroup = 54E4AAD628DC61A200DD3039;
 			packageReferences = (
+				5487156D2902FFF6000964A2 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 54E4AAE028DC61A200DD3039 /* Products */;
 			projectDirPath = "";
@@ -476,10 +513,13 @@
 				54E4AAE528DC61A200DD3039 /* MainView.swift in Sources */,
 				547B59D628DDA2F1000A30EE /* MovementView.swift in Sources */,
 				5402AD6728E89EEF0059983B /* BrownianMotionGenerator.swift in Sources */,
+				548715782905B45C000964A2 /* PixelData.swift in Sources */,
 				5402AD5F28E891BE0059983B /* PlasmaView.swift in Sources */,
 				5402AD6128E892040059983B /* BrownianMotionView.swift in Sources */,
 				5402AD6528E89C700059983B /* FractalView.swift in Sources */,
+				54871572290570C4000964A2 /* Number + Range.swift in Sources */,
 				54FCEFCF28EB0278005AE50D /* ScreenshotMaker.swift in Sources */,
+				5487157B2905BDCE000964A2 /* CGImage + Bitmap.swift in Sources */,
 				54FCEFD228EC247D005AE50D /* ImageSaver.swift in Sources */,
 				54E4AAE328DC61A200DD3039 /* CGAppApp.swift in Sources */,
 				54FCEFD828EC7418005AE50D /* Color + Values.swift in Sources */,
@@ -626,6 +666,8 @@
 				DEVELOPMENT_TEAM = 4LMDFB95MF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "CG Artwork";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "App needs access to your photo library to save images of experiments";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -656,6 +698,8 @@
 				DEVELOPMENT_TEAM = 4LMDFB95MF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "CG Artwork";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "App needs access to your photo library to save images of experiments";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -697,6 +741,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5487156D2902FFF6000964A2 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 5.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5487156E2902FFF6000964A2 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5487156D2902FFF6000964A2 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 54E4AAD728DC61A200DD3039 /* Project object */;
 }

@@ -37,6 +37,9 @@ final class PlasmaGenerator {
     // MARK: - Properties
     
     private let rect: CGRect
+    private let maxX: Int
+    private let maxY: Int
+    
     private var roughness: Double = 0.5
     
     private(set) var pointsMap: [[CGFloat]]
@@ -45,13 +48,15 @@ final class PlasmaGenerator {
     // MARK: - Init
     init(rect: CGRect) {
         self.rect = rect
+        self.maxX = Int(rect.maxX) - 1
+        self.maxY = Int(rect.maxY) - 1
         
         self.pointsMap = Array(
             repeating: Array(
                 repeating: .zero,
-                count: Int(rect.height) + 1
+                count: Int(rect.height)
             ),
-            count: Int(rect.width) + 1
+            count: Int(rect.width)
         )
                 
         save(.random(in: .zero...1.0), at: rect.c1)
@@ -112,11 +117,11 @@ final class PlasmaGenerator {
                 at: rect.e4
             )
             
-            save([getValueBy(rect.c1),
+            save(([getValueBy(rect.c1),
                   getValueBy(rect.c2),
                   getValueBy(rect.c3),
                   getValueBy(rect.c4)
-                  ].avrg() + disp,
+                  ].avrg() + disp).clamped(to: .zero...1.0),
                  at: rect.mid
             )
 
@@ -141,11 +146,11 @@ final class PlasmaGenerator {
     }
     
     private func save(_ value: CGFloat, at point: Point) {
-        pointsMap[point.x][point.y] = value
+        pointsMap[min(maxX, point.x)][min(maxY, point.y)] = value
     }
     
     private func getValueBy(_ point: Point) -> CGFloat {
-        pointsMap[point.x][point.y]
+        pointsMap[min(maxX, point.x)][min(maxY, point.y)]
     }
 }
 
@@ -226,12 +231,3 @@ fileprivate extension Array where Element == CGFloat {
         self.reduce(.zero, +) / CGFloat(self.count)
     }
 }
-
-fileprivate extension CGFloat {
-    // func frame() Makes the value to be between 0.0 and 1.0
-    func frame() -> CGFloat {
-        self < .zero ? .zero : (self > 1.0 ? 1.0 : self)
-    }
-}
-
-//* * * * * * * * * *

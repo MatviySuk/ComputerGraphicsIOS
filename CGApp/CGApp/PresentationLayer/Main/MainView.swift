@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MainView: View {
-    @State private var showIntro = false
+    @State private var showIntro = true
     
     var body: some View {
             if showIntro {
