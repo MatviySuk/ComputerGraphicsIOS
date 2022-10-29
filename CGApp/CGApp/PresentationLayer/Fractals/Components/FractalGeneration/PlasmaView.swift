@@ -39,11 +39,11 @@ final class PlasmaView: FractalView {
             ? calculateColorByHue
             : calculateColorBySat
             
-            var bitmap = [PixelData]()
+            var bitmap = [RGBA32]()
 
             for i in .zero..<height {
                 for j in .zero..<width {
-                    bitmap.append(calculateColor(points[j][i]).pixelData)
+                    bitmap.append(calculateColor(points[j][i]).rgba32)
                 }
             }
             

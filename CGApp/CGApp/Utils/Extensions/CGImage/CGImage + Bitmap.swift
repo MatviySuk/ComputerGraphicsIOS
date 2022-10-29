@@ -8,14 +8,14 @@
 import UIKit
 
 extension CGImage {
-    static func generateFromBitmap(_ bitmap: [PixelData], width: Int, height: Int) -> CGImage? {
+    static func generateFromBitmap(_ bitmap: [RGBA32], width: Int, height: Int) -> CGImage? {
         guard width > 0 && height > 0,
               bitmap.count == width * height else {
             return nil
         }
         
         let rgbColorSpace = CGColorSpaceCreateDeviceRGB()
-        let bitmapInfo = CGBitmapInfo(rawValue: CGImageAlphaInfo.premultipliedFirst.rawValue)
+        let bitmapInfo = CGBitmapInfo(rawValue: RGBA32.bitmapInfo)
         let bitsPerComponent = 8
         let bitsPerPixel = 32
         
@@ -23,7 +23,7 @@ extension CGImage {
         guard let providerRef = CGDataProvider(
             data: NSData(
                 bytes: &data,
-                length: data.count * MemoryLayout<PixelData>.size
+                length: data.count * MemoryLayout<RGBA32>.size
             )) else {
             return nil
         }
@@ -33,7 +33,7 @@ extension CGImage {
             height: height,
             bitsPerComponent: bitsPerComponent,
             bitsPerPixel: bitsPerPixel,
-            bytesPerRow: width * MemoryLayout<PixelData>.size,
+            bytesPerRow: width * MemoryLayout<RGBA32>.size,
             space: rgbColorSpace,
             bitmapInfo: bitmapInfo,
             provider: providerRef,

@@ -11,7 +11,7 @@ struct ColourSettingsView: View {
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var viewModel: ColoursViewModel
     
-    private let brightnessRange: ClosedRange<CGFloat> = 0.1...1.0
+    private let brightnessRange: ClosedRange<CGFloat> = 0.01...1.0
     
     var body: some View {
         NavigationStack {
@@ -41,7 +41,7 @@ struct ColourSettingsView: View {
                         dismiss()
                     }, label: {
                         Image("Close")
-                    })
+                    }).buttonStyle(ProgressButtonStyle())
                 }
             }
         }

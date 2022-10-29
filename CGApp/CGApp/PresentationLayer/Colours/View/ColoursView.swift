@@ -25,7 +25,11 @@ struct ColoursView: View {
             }
             .navigationBarTitleDisplayMode(.inline)
             .navigationTitle(viewModel.navTitle())
-            .sheet(isPresented: $showSheet) { sheetView }
+            .sheet(
+                isPresented: $showSheet,
+                onDismiss: {
+                    viewModel.updateImageBrightness()
+                }) { sheetView }
             .toolbar { toolbarItems }
             .alert(viewModel.alertTitle(),
                    isPresented: $viewModel.presentAlert,

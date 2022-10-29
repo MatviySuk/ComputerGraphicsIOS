@@ -29,4 +29,10 @@ final class ColourImageViewModel: ObservableObject {
     init(uiImage: UIImage) {
         self.uiImage = uiImage
     }
+    
+    // MARK: - Actions
+    
+    func updateImage(_ uiImage: UIImage) {
+        self.uiImage = uiImage
+    }
 }

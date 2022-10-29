@@ -13,13 +13,14 @@ final class ColoursViewModel: ObservableObject {
     @Published var presentAlert = false
     @Published var cyanBrightness: CGFloat = 0.5
     
-    var selectedItem: PhotosPickerItem? = nil {
+    @Published var selectedItem: PhotosPickerItem? = nil {
         didSet {
             retriveImages()
         }
     }
         
     private(set) var imageViewModel: ColourImageViewModel
+    private var originalImage: UIImage = UIImage(named: "Gradient")!
     
     private let imageSaver = ImageSaver()
     private(set) var saveImageResult: (message: String, error: Error?) = ("", nil) {
@@ -31,11 +32,24 @@ final class ColoursViewModel: ObservableObject {
     // MARK: - Init
     
     init() {
-        self.imageViewModel = ColourImageViewModel(uiImage: UIImage(named: "Gradient")!)
+        self.imageViewModel = ColourImageViewModel(uiImage: originalImage)
     }
     
     
     // MARK: - Actions
+    
+    func updateImageBrightness() {
+        Task {
+            await MainActor.run {
+                if let updatedImage = ImageModifier.modifyUIImageByCyan(
+                    originalImage,
+                    brightness: cyanBrightness
+                ) {
+                    imageViewModel.updateImage(updatedImage)
+                }
+            }
+        }
+    }
     
     func retriveImages() {
         Task {
@@ -43,7 +57,8 @@ final class ColoursViewModel: ObservableObject {
                 Task {
                     if let data = try? await selectedItem?.loadTransferable(type: Data.self),
                        let image = UIImage(data: data) {
-                        imageViewModel.uiImage = image
+                        originalImage = image
+                        imageViewModel.updateImage(image)
                     }
                 }
             }

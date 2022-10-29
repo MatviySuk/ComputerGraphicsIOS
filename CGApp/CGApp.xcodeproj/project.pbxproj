@@ -20,6 +20,8 @@
 		5425E9AF290BFD0200AB9675 /* ColourImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5425E9AE290BFD0200AB9675 /* ColourImageViewModel.swift */; };
 		5425E9B1290C054200AB9675 /* Color + assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5425E9B0290C054200AB9675 /* Color + assets.swift */; };
 		5425E9B4290C0C5500AB9675 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5425E9B3290C0C5500AB9675 /* ImagePicker.swift */; };
+		5425E9B7290D3E2F00AB9675 /* RGBA32.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5425E9B6290D3E2F00AB9675 /* RGBA32.swift */; };
+		5425E9BA290D3F0B00AB9675 /* ImageModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5425E9B9290D3F0B00AB9675 /* ImageModifier.swift */; };
 		547B59C928DDA075000A30EE /* FractalsMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B59C828DDA075000A30EE /* FractalsMainView.swift */; };
 		547B59D128DDA2D4000A30EE /* ColoursView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B59D028DDA2D4000A30EE /* ColoursView.swift */; };
 		547B59D628DDA2F1000A30EE /* MovementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B59D528DDA2F1000A30EE /* MovementView.swift */; };
@@ -33,7 +35,6 @@
 		547B59F128DF6D03000A30EE /* PlasmaGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B59F028DF6D03000A30EE /* PlasmaGenerator.swift */; };
 		5487156F2902FFF6000964A2 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5487156E2902FFF6000964A2 /* SnapKit */; };
 		54871572290570C4000964A2 /* Number + Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54871571290570C4000964A2 /* Number + Range.swift */; };
-		548715782905B45C000964A2 /* PixelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548715772905B45C000964A2 /* PixelData.swift */; };
 		5487157B2905BDCE000964A2 /* CGImage + Bitmap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5487157A2905BDCE000964A2 /* CGImage + Bitmap.swift */; };
 		54E4AAE328DC61A200DD3039 /* CGAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E4AAE228DC61A200DD3039 /* CGAppApp.swift */; };
 		54E4AAE528DC61A200DD3039 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E4AAE428DC61A200DD3039 /* MainView.swift */; };
@@ -60,6 +61,8 @@
 		5425E9AE290BFD0200AB9675 /* ColourImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourImageViewModel.swift; sourceTree = "<group>"; };
 		5425E9B0290C054200AB9675 /* Color + assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + assets.swift"; sourceTree = "<group>"; };
 		5425E9B3290C0C5500AB9675 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		5425E9B6290D3E2F00AB9675 /* RGBA32.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBA32.swift; sourceTree = "<group>"; };
+		5425E9B9290D3F0B00AB9675 /* ImageModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModifier.swift; sourceTree = "<group>"; };
 		547B59C828DDA075000A30EE /* FractalsMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FractalsMainView.swift; sourceTree = "<group>"; };
 		547B59D028DDA2D4000A30EE /* ColoursView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoursView.swift; sourceTree = "<group>"; };
 		547B59D528DDA2F1000A30EE /* MovementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementView.swift; sourceTree = "<group>"; };
@@ -72,7 +75,6 @@
 		547B59E728DDC926000A30EE /* IntroItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroItemView.swift; sourceTree = "<group>"; };
 		547B59F028DF6D03000A30EE /* PlasmaGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlasmaGenerator.swift; sourceTree = "<group>"; };
 		54871571290570C4000964A2 /* Number + Range.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Number + Range.swift"; sourceTree = "<group>"; };
-		548715772905B45C000964A2 /* PixelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelData.swift; sourceTree = "<group>"; };
 		5487157A2905BDCE000964A2 /* CGImage + Bitmap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGImage + Bitmap.swift"; sourceTree = "<group>"; };
 		54E4AADF28DC61A200DD3039 /* CGApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CGApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54E4AAE228DC61A200DD3039 /* CGAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGAppApp.swift; sourceTree = "<group>"; };
@@ -157,6 +159,22 @@
 			path = ImagePicker;
 			sourceTree = "<group>";
 		};
+		5425E9B5290D3E2400AB9675 /* RGBA */ = {
+			isa = PBXGroup;
+			children = (
+				5425E9B6290D3E2F00AB9675 /* RGBA32.swift */,
+			);
+			path = RGBA;
+			sourceTree = "<group>";
+		};
+		5425E9B8290D3EFF00AB9675 /* ImageModifier */ = {
+			isa = PBXGroup;
+			children = (
+				5425E9B9290D3F0B00AB9675 /* ImageModifier.swift */,
+			);
+			path = ImageModifier;
+			sourceTree = "<group>";
+		};
 		547B59BD28DD9D1A000A30EE /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,7 +196,7 @@
 		547B59BF28DD9D38000A30EE /* DataLayer */ = {
 			isa = PBXGroup;
 			children = (
-				548715762905B452000964A2 /* Pixel */,
+				5425E9B5290D3E2400AB9675 /* RGBA */,
 				54FCEFDB28EC8ACE005AE50D /* Fractal */,
 			);
 			path = DataLayer;
@@ -208,6 +226,7 @@
 		547B59C228DD9D4E000A30EE /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				5425E9B8290D3EFF00AB9675 /* ImageModifier */,
 				5425E9B2290C0C4D00AB9675 /* ImagePicker */,
 				54FCEFD028EC246D005AE50D /* ImageSaver */,
 				54FCEFCD28EB0263005AE50D /* ScreenShotMaker */,
@@ -401,14 +420,6 @@
 			path = Number;
 			sourceTree = "<group>";
 		};
-		548715762905B452000964A2 /* Pixel */ = {
-			isa = PBXGroup;
-			children = (
-				548715772905B45C000964A2 /* PixelData.swift */,
-			);
-			path = Pixel;
-			sourceTree = "<group>";
-		};
 		548715792905BDC1000964A2 /* CGImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -574,7 +585,6 @@
 				547B59D628DDA2F1000A30EE /* MovementView.swift in Sources */,
 				5425E9B4290C0C5500AB9675 /* ImagePicker.swift in Sources */,
 				5402AD6728E89EEF0059983B /* BrownianMotionGenerator.swift in Sources */,
-				548715782905B45C000964A2 /* PixelData.swift in Sources */,
 				5425E99A290A9AF600AB9675 /* ColoursViewModel.swift in Sources */,
 				5425E9B1290C054200AB9675 /* Color + assets.swift in Sources */,
 				5425E9AF290BFD0200AB9675 /* ColourImageViewModel.swift in Sources */,
@@ -590,6 +600,7 @@
 				54FCEFD828EC7418005AE50D /* Color + Values.swift in Sources */,
 				547B59D128DDA2D4000A30EE /* ColoursView.swift in Sources */,
 				547B59E328DDC71A000A30EE /* FractalGenerationView.swift in Sources */,
+				5425E9B7290D3E2F00AB9675 /* RGBA32.swift in Sources */,
 				547B59D828DDB02E000A30EE /* FractalsViewModel.swift in Sources */,
 				5425E9A4290BDC7F00AB9675 /* ImagePresenterView.swift in Sources */,
 				54FCEFCC28E9B0A0005AE50D /* View + Image.swift in Sources */,
@@ -600,6 +611,7 @@
 				547B59F128DF6D03000A30EE /* PlasmaGenerator.swift in Sources */,
 				547B59E828DDC926000A30EE /* IntroItemView.swift in Sources */,
 				547B59E128DDB460000A30EE /* FractalType.swift in Sources */,
+				5425E9BA290D3F0B00AB9675 /* ImageModifier.swift in Sources */,
 				547B59E528DDC8C6000A30EE /* IntroView.swift in Sources */,
 				5425E9A2290BCF4700AB9675 /* View + Color.swift in Sources */,
 				547B59C928DDA075000A30EE /* FractalsMainView.swift in Sources */,

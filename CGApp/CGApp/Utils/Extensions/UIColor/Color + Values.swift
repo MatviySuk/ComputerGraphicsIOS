@@ -45,7 +45,7 @@ extension UIColor {
         return (hue, sat, bright, alpha)
     }
     
-    var pixelData: PixelData {
+    var rgba32: RGBA32 {
         var r: CGFloat = .zero
         var g: CGFloat = .zero
         var b: CGFloat = .zero
@@ -53,11 +53,11 @@ extension UIColor {
         
         self.getRed(&r, green: &g, blue: &b, alpha: &a)
         
-        return PixelData(
-            a: UInt8(a * 255),
-            r: UInt8(r * 255),
-            g: UInt8(g * 255),
-            b: UInt8(b * 255)
+        return RGBA32(
+            red: UInt8(r * 255),
+            green: UInt8(g * 255),
+            blue: UInt8(b * 255),
+            alpha: UInt8(a * 255)
         )
     }
 }

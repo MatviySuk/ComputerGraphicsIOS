@@ -16,6 +16,9 @@ struct ColourImageView: View {
             Divider()
             HSVDescription
             
+//            Divider()
+//            RGBDescription
+            
             imageView
         }
     }
@@ -50,6 +53,14 @@ struct ColourImageView: View {
             Text(String(format: "K: %.3lf", viewModel.color.cmyk.k))
         }
     }
+    
+//    var RGBDescription: some View {
+//        HStack(spacing: 20) {
+//            Text("R: \(Int(viewModel.color.rgba.r * 255))")
+//            Text("G: \(Int(viewModel.color.rgba.g * 255))")
+//            Text("B: \(Int(viewModel.color.rgba.b * 255))")
+//        }
+//    }
 }
 
 struct ColourImageView_Previews: PreviewProvider {
