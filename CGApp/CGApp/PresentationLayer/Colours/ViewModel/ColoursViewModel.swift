@@ -82,7 +82,7 @@ final class ColoursViewModel: ObservableObject {
     // MARK: - Appearance
     
     func navTitle() -> String {
-        "Colour"
+        "Color"
     }
     
     func alertTitle() -> String {
@@ -94,10 +94,8 @@ final class ColoursViewModel: ObservableObject {
     }
     
     func infoDescription() -> String {
-        "A fractal is a non-regular geometric shape that has the same degree of non-regularity on all scales. Fractals can be thought of as never-ending patterns."
+        "Color is defined as the aspect of things that is caused by differing qualities of light being reflected or emitted by them. To see color, you have to have light. When light shines on an object some colors bounce off the object and others are absorbed by it. Our eyes only see the colors that are bounced off or reflected."
         + "\n\n"
-        + "Plasma fractal also known, as the diamond-square algorithm, can be used to generate realistic-looking landscapes, and different implementations are used in computer graphics software such as Terragen. It is also applicable as a common component in procedural textures."
-        + "\n\n"
-        + "Brownian motion is the random motion of particles suspended in a medium (a liquid or a gas). This pattern of motion typically consists of random fluctuations in a particle's position inside a fluid sub-domain, followed by a relocation to another sub-domain. Each relocation is followed by more fluctuations within the new closed volume. This pattern describes a fluid at thermal equilibrium, defined by a given temperature"
+        + "When working with color, particularly in design and print, we distinguish two methods: additive and subtractive. On a monitor, display or television screen, colors consist of red, green and blue (RGB). But when it comes to printed media, prints or paint for objects or dyes, cyan, magenta and yellow (CMY) form the basis to compose colors. We call working with RGB the additive use and working with CMY the subtractive use of color."
     }
 }

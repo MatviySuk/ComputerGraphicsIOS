@@ -33,7 +33,7 @@ struct ColourSettingsView: View {
                     .tint(.cyan)
                 }
             }
-            .navigationTitle("Colour Settings")
+            .navigationTitle("Color Settings")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .destructiveAction) {

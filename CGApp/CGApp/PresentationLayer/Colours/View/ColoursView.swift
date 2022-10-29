@@ -13,7 +13,7 @@ struct ColoursView: View {
     @StateObject var viewModel = ColoursViewModel()
     
     @State private var showSheet = false
-    @State private var showSettings = true
+    @State private var showSettings = false
         
     // MARK: - Views
     
@@ -28,7 +28,9 @@ struct ColoursView: View {
             .sheet(
                 isPresented: $showSheet,
                 onDismiss: {
-                    viewModel.updateImageBrightness()
+                    if showSettings {
+                        viewModel.updateImageBrightness()
+                    }
                 }) { sheetView }
             .toolbar { toolbarItems }
             .alert(viewModel.alertTitle(),
