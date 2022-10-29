@@ -33,8 +33,6 @@ final class PlasmaView: FractalView {
         super.draw(rect)
                 
         if showFractal {
-            let start = DispatchTime.now()
-
             let width = points.count
             let height = points.first?.count ?? .zero
             let calculateColor: ((CGFloat) -> UIColor) = plasmaModifier == .Hue
@@ -53,10 +51,6 @@ final class PlasmaView: FractalView {
                 layer.contents = image
                 fractalImage = UIImage(cgImage: image)
             }
-                    
-            let end = DispatchTime.now()
-            
-            print("Plasma Time: \((end.uptimeNanoseconds - start.uptimeNanoseconds) / 1000000)")
         }
     }
     
@@ -67,7 +61,7 @@ final class PlasmaView: FractalView {
     }
     
     private func calculateColorBySat(_ sat: CGFloat) -> UIColor {
-        UIColor(hue: color.hue, saturation: sat, brightness: 1.0, alpha: 1.0)
+        UIColor(hue: color.hsb.hue, saturation: sat, brightness: 1.0, alpha: 1.0)
     }
     
     func updatePoints(_ points: [[CGFloat]]) {

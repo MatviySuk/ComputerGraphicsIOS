@@ -20,7 +20,6 @@ struct FractalSettingsView: View {
                                 
                 fractalDetailSettings
             }
-            .background(Color.red)
             .navigationTitle("Fractal Settings")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {

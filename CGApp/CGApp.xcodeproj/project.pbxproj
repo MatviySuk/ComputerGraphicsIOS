@@ -11,6 +11,15 @@
 		5402AD6128E892040059983B /* BrownianMotionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5402AD6028E892040059983B /* BrownianMotionView.swift */; };
 		5402AD6528E89C700059983B /* FractalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5402AD6428E89C700059983B /* FractalView.swift */; };
 		5402AD6728E89EEF0059983B /* BrownianMotionGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5402AD6628E89EEF0059983B /* BrownianMotionGenerator.swift */; };
+		5425E99A290A9AF600AB9675 /* ColoursViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5425E999290A9AF600AB9675 /* ColoursViewModel.swift */; };
+		5425E99D290BC87800AB9675 /* ColourSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5425E99C290BC87800AB9675 /* ColourSettingsView.swift */; };
+		5425E9A2290BCF4700AB9675 /* View + Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5425E9A1290BCF4700AB9675 /* View + Color.swift */; };
+		5425E9A4290BDC7F00AB9675 /* ImagePresenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5425E9A3290BDC7F00AB9675 /* ImagePresenterView.swift */; };
+		5425E9A6290BDCF100AB9675 /* ImagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5425E9A5290BDCF100AB9675 /* ImagePresenter.swift */; };
+		5425E9A8290BF2DC00AB9675 /* ColourImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5425E9A7290BF2DC00AB9675 /* ColourImageView.swift */; };
+		5425E9AF290BFD0200AB9675 /* ColourImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5425E9AE290BFD0200AB9675 /* ColourImageViewModel.swift */; };
+		5425E9B1290C054200AB9675 /* Color + assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5425E9B0290C054200AB9675 /* Color + assets.swift */; };
+		5425E9B4290C0C5500AB9675 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5425E9B3290C0C5500AB9675 /* ImagePicker.swift */; };
 		547B59C928DDA075000A30EE /* FractalsMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B59C828DDA075000A30EE /* FractalsMainView.swift */; };
 		547B59D128DDA2D4000A30EE /* ColoursView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B59D028DDA2D4000A30EE /* ColoursView.swift */; };
 		547B59D628DDA2F1000A30EE /* MovementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B59D528DDA2F1000A30EE /* MovementView.swift */; };
@@ -42,6 +51,15 @@
 		5402AD6028E892040059983B /* BrownianMotionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrownianMotionView.swift; sourceTree = "<group>"; };
 		5402AD6428E89C700059983B /* FractalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FractalView.swift; sourceTree = "<group>"; };
 		5402AD6628E89EEF0059983B /* BrownianMotionGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrownianMotionGenerator.swift; sourceTree = "<group>"; };
+		5425E999290A9AF600AB9675 /* ColoursViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoursViewModel.swift; sourceTree = "<group>"; };
+		5425E99C290BC87800AB9675 /* ColourSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourSettingsView.swift; sourceTree = "<group>"; };
+		5425E9A1290BCF4700AB9675 /* View + Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View + Color.swift"; sourceTree = "<group>"; };
+		5425E9A3290BDC7F00AB9675 /* ImagePresenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePresenterView.swift; sourceTree = "<group>"; };
+		5425E9A5290BDCF100AB9675 /* ImagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePresenter.swift; sourceTree = "<group>"; };
+		5425E9A7290BF2DC00AB9675 /* ColourImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourImageView.swift; sourceTree = "<group>"; };
+		5425E9AE290BFD0200AB9675 /* ColourImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourImageViewModel.swift; sourceTree = "<group>"; };
+		5425E9B0290C054200AB9675 /* Color + assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + assets.swift"; sourceTree = "<group>"; };
+		5425E9B3290C0C5500AB9675 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		547B59C828DDA075000A30EE /* FractalsMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FractalsMainView.swift; sourceTree = "<group>"; };
 		547B59D028DDA2D4000A30EE /* ColoursView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoursView.swift; sourceTree = "<group>"; };
 		547B59D528DDA2F1000A30EE /* MovementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementView.swift; sourceTree = "<group>"; };
@@ -92,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				54FCEFCB28E9B0A0005AE50D /* View + Image.swift */,
+				5425E9A1290BCF4700AB9675 /* View + Color.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -102,6 +121,40 @@
 				547B59DE28DDB43C000A30EE /* FractalSettingsView.swift */,
 			);
 			path = FractalSettings;
+			sourceTree = "<group>";
+		};
+		5425E99B290BC86100AB9675 /* ColourSettings */ = {
+			isa = PBXGroup;
+			children = (
+				5425E99C290BC87800AB9675 /* ColourSettingsView.swift */,
+			);
+			path = ColourSettings;
+			sourceTree = "<group>";
+		};
+		5425E99E290BCEC200AB9675 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5425E9A3290BDC7F00AB9675 /* ImagePresenterView.swift */,
+				5425E9A5290BDCF100AB9675 /* ImagePresenter.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5425E9AD290BFCF300AB9675 /* ColourImage */ = {
+			isa = PBXGroup;
+			children = (
+				5425E9A7290BF2DC00AB9675 /* ColourImageView.swift */,
+				5425E9AE290BFD0200AB9675 /* ColourImageViewModel.swift */,
+			);
+			path = ColourImage;
+			sourceTree = "<group>";
+		};
+		5425E9B2290C0C4D00AB9675 /* ImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				5425E9B3290C0C5500AB9675 /* ImagePicker.swift */,
+			);
+			path = ImagePicker;
 			sourceTree = "<group>";
 		};
 		547B59BD28DD9D1A000A30EE /* Application */ = {
@@ -155,6 +208,7 @@
 		547B59C228DD9D4E000A30EE /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				5425E9B2290C0C4D00AB9675 /* ImagePicker */,
 				54FCEFD028EC246D005AE50D /* ImageSaver */,
 				54FCEFCD28EB0263005AE50D /* ScreenShotMaker */,
 				5402AD6228E89C5E0059983B /* Design */,
@@ -245,6 +299,7 @@
 		547B59CE28DDA2C1000A30EE /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				5425E999290A9AF600AB9675 /* ColoursViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -252,6 +307,9 @@
 		547B59CF28DDA2C6000A30EE /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				5425E9AD290BFCF300AB9675 /* ColourImage */,
+				5425E99E290BCEC200AB9675 /* Views */,
+				5425E99B290BC86100AB9675 /* ColourSettings */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -330,6 +388,7 @@
 			isa = PBXGroup;
 			children = (
 				54FCEFD728EC7418005AE50D /* Color + Values.swift */,
+				5425E9B0290C054200AB9675 /* Color + assets.swift */,
 			);
 			path = UIColor;
 			sourceTree = "<group>";
@@ -510,15 +569,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5425E99D290BC87800AB9675 /* ColourSettingsView.swift in Sources */,
 				54E4AAE528DC61A200DD3039 /* MainView.swift in Sources */,
 				547B59D628DDA2F1000A30EE /* MovementView.swift in Sources */,
+				5425E9B4290C0C5500AB9675 /* ImagePicker.swift in Sources */,
 				5402AD6728E89EEF0059983B /* BrownianMotionGenerator.swift in Sources */,
 				548715782905B45C000964A2 /* PixelData.swift in Sources */,
+				5425E99A290A9AF600AB9675 /* ColoursViewModel.swift in Sources */,
+				5425E9B1290C054200AB9675 /* Color + assets.swift in Sources */,
+				5425E9AF290BFD0200AB9675 /* ColourImageViewModel.swift in Sources */,
 				5402AD5F28E891BE0059983B /* PlasmaView.swift in Sources */,
 				5402AD6128E892040059983B /* BrownianMotionView.swift in Sources */,
 				5402AD6528E89C700059983B /* FractalView.swift in Sources */,
 				54871572290570C4000964A2 /* Number + Range.swift in Sources */,
 				54FCEFCF28EB0278005AE50D /* ScreenshotMaker.swift in Sources */,
+				5425E9A8290BF2DC00AB9675 /* ColourImageView.swift in Sources */,
 				5487157B2905BDCE000964A2 /* CGImage + Bitmap.swift in Sources */,
 				54FCEFD228EC247D005AE50D /* ImageSaver.swift in Sources */,
 				54E4AAE328DC61A200DD3039 /* CGAppApp.swift in Sources */,
@@ -526,14 +591,17 @@
 				547B59D128DDA2D4000A30EE /* ColoursView.swift in Sources */,
 				547B59E328DDC71A000A30EE /* FractalGenerationView.swift in Sources */,
 				547B59D828DDB02E000A30EE /* FractalsViewModel.swift in Sources */,
+				5425E9A4290BDC7F00AB9675 /* ImagePresenterView.swift in Sources */,
 				54FCEFCC28E9B0A0005AE50D /* View + Image.swift in Sources */,
 				547B59DF28DDB43C000A30EE /* FractalSettingsView.swift in Sources */,
 				54FCEFE228EC9F54005AE50D /* ProgressButtonStyle.swift in Sources */,
+				5425E9A6290BDCF100AB9675 /* ImagePresenter.swift in Sources */,
 				547B59DB28DDB230000A30EE /* ShortInfoView.swift in Sources */,
 				547B59F128DF6D03000A30EE /* PlasmaGenerator.swift in Sources */,
 				547B59E828DDC926000A30EE /* IntroItemView.swift in Sources */,
 				547B59E128DDB460000A30EE /* FractalType.swift in Sources */,
 				547B59E528DDC8C6000A30EE /* IntroView.swift in Sources */,
+				5425E9A2290BCF4700AB9675 /* View + Color.swift in Sources */,
 				547B59C928DDA075000A30EE /* FractalsMainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
