@@ -56,7 +56,7 @@ struct IntroView: View {
         IntroItemView(
             icon: Image(systemName: "scribble.variable"),
             title: "Fractals",
-            description: "You will be able to discover the process how fractals generate and apply some modifier to create your own fractal."
+            description: "Discover the process how fractals generate and apply some modifier to create your own fractal."
         )
     }
     
@@ -64,7 +64,7 @@ struct IntroView: View {
         IntroItemView(
             icon: Image(systemName: "paintpalette.fill"),
             title: "Colours",
-            description: "Colours Colours Colours Colours Colours Colours Colours Colours Colours Colours Colours Colours Colours Colours Colours Colours Colours Colours Colours  "
+            description: "Try to change cyan brightness in any photo and share the cool result with your friends."
         )
     }
     

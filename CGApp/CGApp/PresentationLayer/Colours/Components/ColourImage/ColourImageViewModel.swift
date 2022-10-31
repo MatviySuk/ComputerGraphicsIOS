@@ -7,9 +7,7 @@
 
 import SwiftUI
 
-final class ColourImageViewModel: ObservableObject {
-    var screenshotMaker: ScreenshotMaker?
-    
+final class ColourImageViewModel: ObservableObject {    
     @Published var uiImage: UIImage
     
     var point: CGPoint? = nil {

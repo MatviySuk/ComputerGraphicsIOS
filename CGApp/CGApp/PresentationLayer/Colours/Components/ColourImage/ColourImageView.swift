@@ -32,9 +32,6 @@ struct ColourImageView: View {
             ).onChanged { value in
                 viewModel.point = value.location
             })
-            .screenshotView { screenshotMaker in
-                viewModel.screenshotMaker = screenshotMaker
-            }
     }
     
     var HSVDescription: some View {

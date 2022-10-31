@@ -64,19 +64,17 @@ final class ColoursViewModel: ObservableObject {
             }
         }
     }
-        
+    
     func saveImage() {
-        if let uiImage = imageViewModel.screenshotMaker?.screenshot() {
-            imageSaver.successHandler = { [weak self] in
-                self?.saveImageResult = ("The image is successfully saved!", nil)
-            }
-            
-            imageSaver.errorHandler = { [weak self] error in
-                self?.saveImageResult = ("The image is not saved!", error)
-            }
-            
-            imageSaver.writeToPhotoAlbum(image: uiImage)
+        imageSaver.successHandler = { [weak self] in
+            self?.saveImageResult = ("The image is successfully saved!", nil)
         }
+        
+        imageSaver.errorHandler = { [weak self] error in
+            self?.saveImageResult = ("The image is not saved!", error)
+        }
+        
+        imageSaver.writeToPhotoAlbum(image: imageViewModel.uiImage)
     }
     
     // MARK: - Appearance
