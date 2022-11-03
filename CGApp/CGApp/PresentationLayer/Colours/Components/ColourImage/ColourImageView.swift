@@ -12,12 +12,7 @@ struct ColourImageView: View {
     
     var body: some View {
         VStack {
-            CMYKDescription
-            Divider()
-            HSVDescription
-            
-//            Divider()
-//            RGBDescription
+            colorDescription
             
             imageView
         }
@@ -32,6 +27,17 @@ struct ColourImageView: View {
             ).onChanged { value in
                 viewModel.point = value.location
             })
+    }
+    
+    var colorDescription: some View {
+        Group {
+            switch viewModel.colorModel {
+            case .HSV:
+                HSVDescription
+            case .CMYK:
+                CMYKDescription
+            }
+        }
     }
     
     var HSVDescription: some View {
@@ -62,6 +68,6 @@ struct ColourImageView: View {
 
 struct ColourImageView_Previews: PreviewProvider {
     static var previews: some View {
-        ColourImageView(viewModel: .init(uiImage: UIImage(named: "Gradient")!))
+        ColourImageView(viewModel: .init(uiImage: UIImage(named: "Gradient")!, colorModel: .CMYK))
     }
 }

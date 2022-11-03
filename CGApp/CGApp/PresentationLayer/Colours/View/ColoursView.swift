@@ -12,7 +12,7 @@ struct ColoursView: View {
     // MARK: - Properties
     @StateObject var viewModel = ColoursViewModel()
     
-    @State private var showSheet = false
+    @State private var showInfo = false
     @State private var showSettings = false
         
     // MARK: - Views
@@ -25,20 +25,16 @@ struct ColoursView: View {
             }
             .navigationBarTitleDisplayMode(.inline)
             .navigationTitle(viewModel.navTitle())
-            .sheet(
-                isPresented: $showSheet,
-                onDismiss: {
-                    if showSettings {
-                        viewModel.updateImageBrightness()
-                    }
-                }) { sheetView }
             .toolbar { toolbarItems }
+            .sheet(isPresented: $showInfo) { infoView }
+            .sheet(isPresented: $showSettings, onDismiss: {
+                viewModel.updateImage()
+            }) { settingsView }
             .alert(viewModel.alertTitle(),
-                   isPresented: $viewModel.presentAlert,
-                   actions: { },
-                   message: { alertMessage }
+                isPresented: $viewModel.presentAlert,
+                actions: { },
+                message: { alertMessage }
             )
-            
         }
     }
     
@@ -52,20 +48,18 @@ struct ColoursView: View {
             + (viewModel.saveImageResult.error?.localizedDescription ?? "")
         )
     }
-        
-    var sheetView: some View {
-        Group {
-            if showSettings {
-                ColourSettingsView()
-                    .environmentObject(viewModel)
-                    .presentationDragIndicator(.visible)
-                    .presentationDetents([.height(200)])
-            } else {
-                ShortInfoView(
-                    title: viewModel.infoTitle(),
-                    description: viewModel.infoDescription())
-            }
-        }
+    
+    var settingsView: some View {
+        ColourSettingsView()
+            .environmentObject(viewModel)
+            .presentationDragIndicator(.visible)
+            .presentationDetents([.height(300)])
+    }
+    
+    var infoView: some View {
+        ShortInfoView(
+            title: viewModel.infoTitle(),
+            description: viewModel.infoDescription())
     }
     
     
@@ -87,7 +81,7 @@ struct ColoursView: View {
     var infoButton: some View {
         Button(action: {
             withAnimation {
-                showSheet(with: false)
+                showInfo.toggle()
             }
         }, label: {
             Image(systemName: "book.fill")
@@ -116,7 +110,7 @@ struct ColoursView: View {
     var settingsButton: some View {
         Button(action: {
             withAnimation {
-                showSheet(with: true)
+                showSettings.toggle()
             }
         }, label: {
             Image(systemName: "gearshape")
@@ -124,11 +118,8 @@ struct ColoursView: View {
     }
     
     // MARK: - Actions
+
     
-    private func showSheet(with settings: Bool) {
-        showSettings = settings
-        showSheet.toggle()
-    }
 }
 
 struct ColoursView_Previews: PreviewProvider {

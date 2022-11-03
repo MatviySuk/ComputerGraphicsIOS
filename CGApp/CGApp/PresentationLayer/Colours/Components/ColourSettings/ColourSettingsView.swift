@@ -16,21 +16,31 @@ struct ColourSettingsView: View {
     var body: some View {
         NavigationStack {
             Form {
-                Section("Cyan Brightness") {
-                    Slider(
-                        value: $viewModel.cyanBrightness,
-                        in: brightnessRange,
-                        label: {},
-                        minimumValueLabel: {
-                            Image(systemName: "sun.min.fill")
-                                .foregroundColor(.cyan30)
-                        },
-                        maximumValueLabel: {
-                            Image(systemName: "sun.max.fill")
-                                .foregroundColor(.cyan70)
+                Section("Color Model") {
+                    Picker("", selection: $viewModel.colorModel) {
+                        ForEach(ColorModel.allCases, id: \.self) { color in
+                            Text(color.title)
                         }
-                    )
-                    .tint(.cyan)
+                    }.pickerStyle(.segmented)
+                }
+                
+                if viewModel.colorModel == .HSV {
+                    Section("Cyan Brightness") {
+                        Slider(
+                            value: $viewModel.cyanBrightness,
+                            in: brightnessRange,
+                            label: {},
+                            minimumValueLabel: {
+                                Image(systemName: "sun.min.fill")
+                                    .foregroundColor(.cyan30)
+                            },
+                            maximumValueLabel: {
+                                Image(systemName: "sun.max.fill")
+                                    .foregroundColor(.cyan70)
+                            }
+                        )
+                        .tint(.cyan)
+                    }
                 }
             }
             .navigationTitle("Color Settings")

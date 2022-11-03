@@ -33,6 +33,9 @@
 		547B59E528DDC8C6000A30EE /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B59E428DDC8C6000A30EE /* IntroView.swift */; };
 		547B59E828DDC926000A30EE /* IntroItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B59E728DDC926000A30EE /* IntroItemView.swift */; };
 		547B59F128DF6D03000A30EE /* PlasmaGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B59F028DF6D03000A30EE /* PlasmaGenerator.swift */; };
+		547D303A2912D7CB001BC207 /* ColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547D30392912D7CB001BC207 /* ColorModel.swift */; };
+		547D303D2912E790001BC207 /* CMYK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547D303C2912E790001BC207 /* CMYK.swift */; };
+		547D30402912EA48001BC207 /* HSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547D303F2912EA48001BC207 /* HSV.swift */; };
 		5487156F2902FFF6000964A2 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5487156E2902FFF6000964A2 /* SnapKit */; };
 		54871572290570C4000964A2 /* Number + Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54871571290570C4000964A2 /* Number + Range.swift */; };
 		5487157B2905BDCE000964A2 /* CGImage + Bitmap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5487157A2905BDCE000964A2 /* CGImage + Bitmap.swift */; };
@@ -74,6 +77,9 @@
 		547B59E428DDC8C6000A30EE /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
 		547B59E728DDC926000A30EE /* IntroItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroItemView.swift; sourceTree = "<group>"; };
 		547B59F028DF6D03000A30EE /* PlasmaGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlasmaGenerator.swift; sourceTree = "<group>"; };
+		547D30392912D7CB001BC207 /* ColorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorModel.swift; sourceTree = "<group>"; };
+		547D303C2912E790001BC207 /* CMYK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMYK.swift; sourceTree = "<group>"; };
+		547D303F2912EA48001BC207 /* HSV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSV.swift; sourceTree = "<group>"; };
 		54871571290570C4000964A2 /* Number + Range.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Number + Range.swift"; sourceTree = "<group>"; };
 		5487157A2905BDCE000964A2 /* CGImage + Bitmap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGImage + Bitmap.swift"; sourceTree = "<group>"; };
 		54E4AADF28DC61A200DD3039 /* CGApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CGApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -196,7 +202,7 @@
 		547B59BF28DD9D38000A30EE /* DataLayer */ = {
 			isa = PBXGroup;
 			children = (
-				5425E9B5290D3E2400AB9675 /* RGBA */,
+				547D30382912D7BD001BC207 /* ColorModel */,
 				54FCEFDB28EC8ACE005AE50D /* Fractal */,
 			);
 			path = DataLayer;
@@ -412,6 +418,33 @@
 			path = UIColor;
 			sourceTree = "<group>";
 		};
+		547D30382912D7BD001BC207 /* ColorModel */ = {
+			isa = PBXGroup;
+			children = (
+				547D303E2912EA3C001BC207 /* HSV */,
+				547D303B2912E781001BC207 /* CMYK */,
+				5425E9B5290D3E2400AB9675 /* RGBA */,
+				547D30392912D7CB001BC207 /* ColorModel.swift */,
+			);
+			path = ColorModel;
+			sourceTree = "<group>";
+		};
+		547D303B2912E781001BC207 /* CMYK */ = {
+			isa = PBXGroup;
+			children = (
+				547D303C2912E790001BC207 /* CMYK.swift */,
+			);
+			path = CMYK;
+			sourceTree = "<group>";
+		};
+		547D303E2912EA3C001BC207 /* HSV */ = {
+			isa = PBXGroup;
+			children = (
+				547D303F2912EA48001BC207 /* HSV.swift */,
+			);
+			path = HSV;
+			sourceTree = "<group>";
+		};
 		54871570290570AD000964A2 /* Number */ = {
 			isa = PBXGroup;
 			children = (
@@ -589,6 +622,7 @@
 				5425E9B1290C054200AB9675 /* Color + assets.swift in Sources */,
 				5425E9AF290BFD0200AB9675 /* ColourImageViewModel.swift in Sources */,
 				5402AD5F28E891BE0059983B /* PlasmaView.swift in Sources */,
+				547D303D2912E790001BC207 /* CMYK.swift in Sources */,
 				5402AD6128E892040059983B /* BrownianMotionView.swift in Sources */,
 				5402AD6528E89C700059983B /* FractalView.swift in Sources */,
 				54871572290570C4000964A2 /* Number + Range.swift in Sources */,
@@ -596,7 +630,9 @@
 				5425E9A8290BF2DC00AB9675 /* ColourImageView.swift in Sources */,
 				5487157B2905BDCE000964A2 /* CGImage + Bitmap.swift in Sources */,
 				54FCEFD228EC247D005AE50D /* ImageSaver.swift in Sources */,
+				547D30402912EA48001BC207 /* HSV.swift in Sources */,
 				54E4AAE328DC61A200DD3039 /* CGAppApp.swift in Sources */,
+				547D303A2912D7CB001BC207 /* ColorModel.swift in Sources */,
 				54FCEFD828EC7418005AE50D /* Color + Values.swift in Sources */,
 				547B59D128DDA2D4000A30EE /* ColoursView.swift in Sources */,
 				547B59E328DDC71A000A30EE /* FractalGenerationView.swift in Sources */,

@@ -9,7 +9,11 @@ import Foundation
 import UIKit
 
 struct ImageModifier {
-    static func modifyUIImageByCyan(_ image: UIImage, brightness: CGFloat) -> UIImage? {
+    static func modifyUIImageByCyan(
+        _ image: UIImage,
+        colorModel: ColorModel,
+        brightness: CGFloat
+    ) -> UIImage? {
         guard let inputCGImage = image.cgImage else {
             print("unable to get cgImage")
             return nil
@@ -40,9 +44,9 @@ struct ImageModifier {
         for row in 0 ..< Int(height) {
             for column in 0 ..< Int(width) {
                 let offset = row * width + column
-                if pixelBuffer[offset].isCyanRange {
-                    pixelBuffer[offset] = pixelBuffer[offset].modifyBrightness(brightness)
-                }
+                pixelBuffer[offset] = colorModel == .CMYK
+                ? pixelBuffer[offset].toCMYK().toRGBA()
+                : pixelBuffer[offset].toHSV().toRGBA().modifyCyanBrightness(brightness)
             }
         }
 

@@ -11,7 +11,12 @@ import PhotosUI
 final class ColoursViewModel: ObservableObject {
     // MARK: - Properties
     @Published var presentAlert = false
-    @Published var cyanBrightness: CGFloat = 0.5
+    @Published var cyanBrightness: CGFloat = 1.0
+    @Published var colorModel: ColorModel = .CMYK {
+        didSet {
+            imageViewModel.updateColorModel(colorModel)
+        }
+    }
     
     @Published var selectedItem: PhotosPickerItem? = nil {
         didSet {
@@ -32,21 +37,23 @@ final class ColoursViewModel: ObservableObject {
     // MARK: - Init
     
     init() {
-        self.imageViewModel = ColourImageViewModel(uiImage: originalImage)
+        self.imageViewModel = ColourImageViewModel(
+            uiImage: originalImage,
+            colorModel: .CMYK
+        )
     }
     
     
     // MARK: - Actions
     
-    func updateImageBrightness() {
+    func updateImage() {
         Task {
             await MainActor.run {
-                if let updatedImage = ImageModifier.modifyUIImageByCyan(
-                    originalImage,
-                    brightness: cyanBrightness
-                ) {
-                    imageViewModel.updateImage(updatedImage)
+                if colorModel == .CMYK {
+                    cyanBrightness = 1.0
                 }
+                
+                imageViewModel.updateImage(originalImage, brightness: cyanBrightness)
             }
         }
     }
@@ -58,7 +65,7 @@ final class ColoursViewModel: ObservableObject {
                     if let data = try? await selectedItem?.loadTransferable(type: Data.self),
                        let image = UIImage(data: data) {
                         originalImage = image
-                        imageViewModel.updateImage(image)
+                        imageViewModel.updateImage(image, brightness: cyanBrightness)
                     }
                 }
             }
