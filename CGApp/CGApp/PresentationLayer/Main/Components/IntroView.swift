@@ -72,7 +72,7 @@ struct IntroView: View {
         IntroItemView(
             icon: Image(systemName: "move.3d"),
             title: "Movement",
-            description: "Movement Movement Movement Movement Movement Movement Movement Movement Movement Movement Movement Movement Movement Movement Movement Movement Movement Movement Movement  "
+            description: "Discover affine transformation applying variety of modifications on geometrical objects."
         )
     }
 }
